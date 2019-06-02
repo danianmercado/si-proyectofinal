@@ -45,7 +45,7 @@
                                 <input id="fecha_nacimiento" name="fecha_nacimiento" type="text" class="datepicker">
                                 <label for="fecha_nacimiento">Fecha de nacimiento:</label>
                             </div>
-                            
+
 
                         </div>
 
