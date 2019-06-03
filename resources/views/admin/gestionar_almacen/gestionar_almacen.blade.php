@@ -5,6 +5,7 @@
 
             <form action="#" method="POST">
                 @csrf
+				
                 <div class="card z-depth-4">
                     <div class="card-content">
                         <span class="card-title center-align">Registrar almacen </span>
@@ -24,9 +25,9 @@
                                 <button class="btn positive-primary-color" type="submit">registrar</button>
                             </div>
                         </div>
-
                     </div>
                 </div>
+				
             </form>
 
 
