@@ -36,9 +36,9 @@
             fila[1] = '{{$servicio->Tipo_de_Servicio}}';
             fila[2] = '{{$servicio->Estado}}';
             fila[3] = '<div>' +
-                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
-                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Editar</a></span>' +
-                '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Eliminar</a></span>' +
+                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio.show', [$servicio->id])}}" + ' " class="white-text" >Detalle</a></span>' +
+                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio.editar', [$servicio->id])}}" + ' " class="white-text" >Editar</a></span>' +
+                '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio.eliminar', [$servicio->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
                 '</div>';
             datos.push(fila);
             @endforeach

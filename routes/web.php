@@ -92,7 +92,7 @@ Route::group(['prefix'=>'admin'], function (){
 ///////////    SERVICIO ///////////////////////////////////////////////////////////////////
         Route::group(['prefix'=>'servicio'], function (){
             Route::get('index','ServicioController@index' )->name('admin.servicio.index'); ///'admin.gestionar_servicio.index'
-            Route::get('show/{id_servicio}','ServicioController@show')->name('admin.vehiculo.show');
+            Route::get('show/{id_servicio}','ServicioController@show')->name('admin.servicio.show');
             Route::get('registrar','ServicioController@registrar')->name('admin.servicio.registrar');
             Route::post('guardar','ServicioController@guardar')->name('admin.servicio.guardar');
             Route::get('editar/{id_servicio}','ServicioController@editar')->name('admin.servicio.editar');
