@@ -40,7 +40,7 @@
             fila[3] =  '{{$servicio_Tercerizado->telefono}}';
             fila[4] = '<div>' +
                 '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
-                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Editar</a></span>' +
+                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio_tercerizado.editar', [$servicio_Tercerizado->id])}}" + ' " class="white-text" >Editar</a></span>' +
                 '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Eliminar</a></span>' +
                 '</div>';
             datos.push(fila);
