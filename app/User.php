@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Personal', 'id_personal');
     }
+
+    public function bitacoras()
+    {
+        return $this->hasMany('App\Bitacora');
+    }
 }
