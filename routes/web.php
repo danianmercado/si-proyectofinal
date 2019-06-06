@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -107,7 +109,7 @@ Route::group(['prefix'=>'admin'], function (){
             Route::get('registrar','ServicioTercerizadoController@registrar' )->name('admin.servicio_tercerizado.registrar'); //'admin.gestionar_servicios_tercerizados.registrar_servicios_tercerizados'
             Route::post('guardar','ServicioTercerizadoController@guardar')->name('admin.servicio_tercerizado.guardar');
             Route::get('editar/{id_servicio_tercerizado}','ServicioTercerizadoController@editar')->name('admin.servicio_tercerizado.editar');
-            Route::put('modificar/{id_servicio_tercerizado}','ServicioTercerizadoController@modificar')->name('admin.servicio_tercerizado.modificar');
+            Route::put('modificar/{id_servicio_tercerizado}','ServicioTercerizadoController@modificar')->name('admin.servicio_tercerozado.modificar');
             Route::get('eliminar/{id_servicio_tercerizado}','ServicioTercerizadoController@eliminar')->name('admin.servicio_tercerizado.eliminar');
             Route::delete('delete/{id_servicio_tercerizado}','ServicioTercerizadoController@delete')->name('admin.servicio_tercerizado.delete');
         });
@@ -149,6 +151,17 @@ Route::group(['prefix'=>'almacen'], function (){
     Route::delete('delete/{id_almacen}','AlmacenController@delete')->name('admin.almacen.delete');
 });
 
+Route::group(['prefix'=>'insumo'], function (){
+    Route::get('index', 'InsumoController@index')->name('admin.insumo.index');
+    Route::get('show/{id}', 'InsumoController@show')->name('admin.insumo.show');
+    Route::get('registrar', 'InsumoController@registrar')->name('admin.insumo.registrar');
+    Route::post('guardar', 'InsumoController@guardar')->name('admin.insumo.guardar');
+    Route::get('editar/{id}', 'InsumoController@editar')->name('admin.insumo.editar');
+    Route::put('modificar/{id}', 'InsumoController@modificar')->name('admin.insumo.modificar');
+    Route::get('eliminar/{id}', 'InsumoController@eliminar')->name('admin.insumo.eliminar');
+    Route::delete('delete/{id}', 'InsumoController@delete')->name('admin.insumo.delete');
+
+});
 
 ///////////    INGRESO DE INSUMOS ///////////////////////////////////////////////////////////////////
 Route::group(['prefix'=>'ingreso_insumo'], function (){

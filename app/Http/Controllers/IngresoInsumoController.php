@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\DB;
 class IngresoInsumoController extends Controller
 {
 
-
  
     public function registrar(){
         $insumos = Insumo::all();
@@ -38,13 +37,13 @@ class IngresoInsumoController extends Controller
         $id_ingreso_insumo->id_almacen = $request['id_almacen'];
         $id_ingreso_insumo->id_producto = $request['id_producto'];
         $id_ingreso_insumo->Cantidad = $request['Cantidad'];
-        $vehiculo->save();
-        return redirect()->route('admin.insumo.index');
+        $id_ingreso_insumo->save();
         if( (DB::select("SELECT id FROM stock__p where id=$id_ingreso_insumo"))!=null)
         {   
             $cant=(DB::select("SELECT top(Cantidad) FROM stock__p where id=$id_ingreso_insumo"));
             $suma=$cant;
     
-        } 
+        }
+        return redirect()->route('admin.insumo.index');
     }
 }

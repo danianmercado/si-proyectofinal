@@ -26,7 +26,7 @@
                                 <select name="id_almacen">
                                     <option value="" disabled selected>Seleccione el almacen:</option>
                                     @foreach($almacenes as $almacen)
-                                        <option value="{{$almacen->id}}">{{$almacen->id}}</option>
+                                        <option value="{{$almacen->id}}">{{$almacen->id . ' ' . $almacen->ubicacion}}</option>
                                     @endforeach
                                 </select>
 

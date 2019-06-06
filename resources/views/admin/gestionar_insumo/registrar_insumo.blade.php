@@ -15,7 +15,7 @@
                             </div>
 
                             <div class="col s12 input-field">
-                                <input  id="Costo" name="Costo" type="text" class="validate">
+                                <input  id="Costo" name="Costo" type="number" class="validate">
                                 <label for="Costo">costo:</label>
                             </div>
 
@@ -27,6 +27,21 @@
                             <div class="col s12 input-field">
                                 <input id="Nombre" name="Nombre" type="text" class="validate">
                                 <label for="Nombre">Nombre :</label>
+                            </div>
+
+                            <div class="col s12  input-field">
+                                <input id="marca" name="marca" type="text" class="validate">
+                                <label for="marca">Marca:</label>
+                            </div>
+
+                            <div class="col s12  input-field">
+                                <input id="procedencia" name="procedencia" type="text" class="validate">
+                                <label for="procedencia">Procedencia:</label>
+                            </div>
+
+                            <div class="col s12  input-field">
+                                <input id="Perteneciente" name="Perteneciente" type="text" class="validate">
+                                <label for="Perteneciente">Perteneciente:</label>
                             </div>
 
                         <div class="row">
