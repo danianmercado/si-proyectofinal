@@ -13,10 +13,11 @@
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>unidad de medida</th>
-                        <th>costo</th>
-                        <th>descripcion</th>
                         <th>nombre</th>
+                        <th>Descripcion</th>
+                        <th>Unidad de medida</th>
+                        <th>Costo</th>
+                        <th>Cantidad</th>                       
                         <th>Acciones</th>
                     </tr>
 
@@ -32,20 +33,24 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var datos = [];
-                @for($i = 0; $i < 4; $i++)
+                @foreach($insumos as $insumo)
             var fila = [];
-            fila[0] = '{{$i}}';
-            fila[1] = 'Lt';
-            fila[2] = '70';
-            fila[3] = 'aceite de motor sintetico';
-            fila[4] = 'aceite 5w30';
-            fila[5] = '<div>' +
+            if ('{{$insumo->Tipo_producto}}'=='I'){
+            fila[0] = '{{$insumo->id}}';
+            fila[1] = '{{$insumo->Nombre}}';
+            fila[2] = '{{$insumo->descripcion}}';
+            fila[3] = '{{$insumo->unidad_de_medida}}';
+            fila[4] = '{{$insumo->Costo}}';
+            fila[5] = '{{$insumo->ingreso_insumo->first()['Cantidad']}}'; 
+            fila[6] = '<div>' +
                 '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
-                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Editar</a></span>' +
-                '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Eliminar</a></span>' +
+                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.insumo.editar', [$insumo->id])}}" + ' " class="white-text" >Editar</a></span>' +
+                '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.insumo.eliminar', [$insumo->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
+                '<span class="new badge positive-secondary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.ingreso_insumo.registrar', [$insumo->id])}}" + ' " class="white-text" >Ingresar Unidades</a></span>' +
                 '</div>';
             datos.push(fila);
-            @endfor
+            }
+            @endforeach
             addDatosGeneral(datos);
         });
 

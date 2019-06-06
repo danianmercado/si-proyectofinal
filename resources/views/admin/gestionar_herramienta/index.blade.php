@@ -2,7 +2,7 @@
 @section('contenido')
     <div class="row">
         <div class="col s12">
-            <a href="{{route('admin.herramienta.registrar')}}" class="waves-effect waves-light btn positive-primary-color"><i class="material-icons right">add_box</i>Registrar Servicio</a>
+            <a href="{{route('admin.herramienta.registrar')}}" class="waves-effect waves-light btn positive-primary-color"><i class="material-icons right">add_box</i>Registrar Herramienta</a>
         </div>
     </div>
 
@@ -31,19 +31,20 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var datos = [];
-                @for($i = 0; $i < 5; $i++)
+             @foreach($herramientas as $herramienta)
             var fila = [];
-            fila[0] = '{{$i}}';
-            fila[1] = 'llave inglesa';
-            fila[2] = 'stanly';
-            fila[3] = 'llaves';
+           
+            fila[0] = '{{$herramienta->id}}';
+            fila[1] = '{{$herramienta->Descripcion}}';
+            fila[2] = '{{$herramienta->Marca}}';
+            fila[3] = '{{$herramienta->Tipo}}';
             fila[4] = '<div>' +
                 '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
-                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Editar</a></span>' +
-                '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Eliminar</a></span>' +
+                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.herramienta.editar', [$herramienta->id])}}" + ' " class="white-text" >Editar</a></span>' +
+                '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.herramienta.eliminar', [$herramienta->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
                 '</div>';
             datos.push(fila);
-            @endfor
+            @endforeach
             addDatosGeneral(datos);
         });
 

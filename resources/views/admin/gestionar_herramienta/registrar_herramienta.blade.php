@@ -3,25 +3,25 @@
     <div class="row">
         <div class="col s12 m10 offset-m1 l6 offset-l3">
 
-            <form action="#" method="POST">
+            <form action="{{route('admin.herramienta.guardar')}}" method="POST">
                 @csrf
                 <div class="card z-depth-4">
                     <div class="card-content">
                         <span class="card-title center-align">Registrar Herramientas</span>
                         <div class="row">
                             <div class="col s12 input-field">
-                                <input  id="Descripcion_herramienta" name="Descripcion_herramienta" type="text" class="validate">
-                                <label for="Descripcion_herramienta">Descripcion de la herramienta:</label>
+                                <input  id="Descripcion" name="Descripcion" type="text" class="validate">
+                                <label for="Descripcion">Descripcion de la herramienta:</label>
                             </div>
 
                             <div class="col s12 input-field">
-                                <input  id="marca" name="marca" type="text" class="validate">
-                                <label for="marca">Marca de la herramienta:</label>
+                                <input  id="Marca" name="Marca" type="text" class="validate">
+                                <label for="Marca">Marca de la herramienta:</label>
                             </div>
 
                             <div class="col s12  input-field">
-                                <input id="tipo" name="tipo" type="text" class="validate">
-                                <label for="tipo">tipo de herramienta:</label>
+                                <input id="Tipo" name="Tipo" type="text" class="validate">
+                                <label for="Tipo">tipo de herramienta:</label>
                             </div>
 
 

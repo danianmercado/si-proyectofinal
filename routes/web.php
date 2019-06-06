@@ -112,46 +112,53 @@ Route::group(['prefix'=>'admin'], function (){
             Route::delete('delete/{id_servicio_tercerizado}','ServicioTercerizadoController@delete')->name('admin.servicio_tercerizado.delete');
         });
 
+///////////    REPUESTO ///////////////////////////////////////////////////////////////////
+Route::group(['prefix'=>'repuesto'], function (){
+    Route::get('index','RepuestoController@index' )->name('admin.repuesto.index'); ///'admin.gestionar_repuesto.index'
+    Route::get('show/{id_repuesto}','RepuestoController@show')->name('admin.vehiculo.show');
+    Route::get('registrar','RepuestoController@registrar')->name('admin.repuesto.registrar');
+    Route::post('guardar','RepuestoController@guardar')->name('admin.repuesto.guardar');
+    Route::get('editar/{id_repuesto}','RepuestoController@editar')->name('admin.repuesto.editar');
+    Route::put('modificar/{id_repuesto}','RepuestoController@modificar')->name('admin.repuesto.modificar');
+    Route::get('eliminar/{id_repuesto}','RepuestoController@eliminar')->name('admin.repuesto.eliminar');
+    Route::delete('delete/{id_repuesto}','RepuestoController@delete')->name('admin.repuesto.delete');
+});
+
+///////////    HERRAMIENTA ///////////////////////////////////////////////////////////////////
+Route::group(['prefix'=>'herramienta'], function (){
+    Route::get('index','HerramientaController@index' )->name('admin.herramienta.index'); ///'admin.gestionar_herramienta.index'
+    Route::get('show/{id_herramienta}','HerramientaController@show')->name('admin.vehiculo.show');
+    Route::get('registrar','HerramientaController@registrar')->name('admin.herramienta.registrar');
+    Route::post('guardar','HerramientaController@guardar')->name('admin.herramienta.guardar');
+    Route::get('editar/{id_herramienta}','HerramientaController@editar')->name('admin.herramienta.editar');
+    Route::put('modificar/{id_herramienta}','HerramientaController@modificar')->name('admin.herramienta.modificar');
+    Route::get('eliminar/{id_herramienta}','HerramientaController@eliminar')->name('admin.herramienta.eliminar');
+    Route::delete('delete/{id_herramienta}','HerramientaController@delete')->name('admin.herramienta.delete');
+});
 
 
-        Route::group(['prefix'=>'herramienta'], function (){
-            Route::get('index', function () {
-                return view('admin.gestionar_herramienta.index');
-            })->name('admin.herramienta.index');
+///////////    ALMACEN ///////////////////////////////////////////////////////////////////
+Route::group(['prefix'=>'almacen'], function (){
+    Route::get('index','AlmacenController@index' )->name('admin.almacen.index'); ///'admin.gestionar_almacen.index'
+    Route::get('show/{id_almacen}','AlmacenController@show')->name('admin.vehiculo.show');
+    Route::get('registrar','AlmacenController@registrar')->name('admin.almacen.registrar');
+    Route::post('guardar','AlmacenController@guardar')->name('admin.almacen.guardar');
+    Route::get('editar/{id_almacen}','AlmacenController@editar')->name('admin.almacen.editar');
+    Route::put('modificar/{id_almacen}','AlmacenController@modificar')->name('admin.almacen.modificar');
+    Route::get('eliminar/{id_almacen}','AlmacenController@eliminar')->name('admin.almacen.eliminar');
+    Route::delete('delete/{id_almacen}','AlmacenController@delete')->name('admin.almacen.delete');
+});
 
-            Route::get('registrar', function (){
-                return view('admin.gestionar_herramienta.registrar_herramienta');
-            })->name('admin.herramienta.registrar');
-        });
-        Route::group(['prefix'=>'almacen'], function (){
-            Route::get('index', function () {
-                return view('admin.gestionar_almacen.index');
-            })->name('admin.almacen.index');
 
-            Route::get('registrar', function (){
-                return view('admin.gestionar_almacen.gestionar_almacen');
-            })->name('admin.almacen.registrar');
-        });
-        Route::group(['prefix'=>'insumo'], function (){
-            Route::get('index', function () {
-                return view('admin.gestionar_insumo.index');
-            })->name('admin.insumo.index');
+///////////    INGRESO DE INSUMOS ///////////////////////////////////////////////////////////////////
+Route::group(['prefix'=>'ingreso_insumo'], function (){
+    Route::get('registrar','IngresoInsumoController@registrar')->name('admin.ingreso_insumo.registrar');
+    Route::post('guardar','IngresoInsumoController@guardar')->name('admin.ingreso_insumo.guardar');
+    Route::get('editar/{id_ingreso_insumo}','Ingreso_InsumoController@editar')->name('admin.ingreso_insumo.editar');
+    Route::put('modificar/{id_ingreso_insumo}','Ingreso_InsumoController@modificar')->name('admin.ingreso_insumo.modificar');
+});
 
-            Route::get('registrar', function (){
-                return view('admin.gestionar_insumo.gestionar_insumo');
-            })->name('admin.insumo.registrar');
-        });
-
-        Route::group(['prefix'=>'repuesto'], function (){
-            Route::get('index', function () {
-                return view('admin.gestionar_repuestos.index');
-            })->name('admin.repuesto.index');
-
-            Route::get('registrar', function (){
-                return view('admin.gestionar_repuestos.registrar_repuesto');
-            })->name('admin.repuesto.registrar');
-        });
-
+       
 
 
 });

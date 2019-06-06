@@ -3,20 +3,20 @@
     <div class="row">
         <div class="col s12 m10 offset-m1 l6 offset-l3">
 
-            <form action="#" method="POST">
+            <form action="{{route('admin.insumo.guardar')}}" method="POST">
                 @csrf
                 <div class="card z-depth-4">
                     <div class="card-content">
                         <span class="card-title center-align">Registrar insumo </span>
                         <div class="row">
                             <div class="col s12 input-field">
-                                <input  id="unidad de medida" name="unidad de medida" type="text" class="validate">
-                                <label for="unidad de medida">Unidad medida :</label>
+                                <input  id="unidad_de_medida" name="unidad_de_medida" type="text" class="validate">
+                                <label for="unidad_de_medida">Unidad medida :</label>
                             </div>
 
                             <div class="col s12 input-field">
-                                <input  id="costo" name="costo" type="text" class="validate">
-                                <label for="costo">costo:</label>
+                                <input  id="Costo" name="Costo" type="text" class="validate">
+                                <label for="Costo">costo:</label>
                             </div>
 
                             <div class="col s12  input-field">
@@ -25,12 +25,13 @@
                             </div>
 
                             <div class="col s12 input-field">
-                                <input id="nombre" name="nombre" type="text" class="validate">
-                                <label for="nombre">Nombre :</label>
+                                <input id="Nombre" name="Nombre" type="text" class="validate">
+                                <label for="Nombre">Nombre :</label>
                             </div>
 
                         <div class="row">
                             <div class="col s12 right-align">
+                                <a href="{{route('admin.insumo.index')}}" class="btn negative-primary-color" type="submit">cancelar</a>
                                 <button class="btn positive-primary-color" type="submit">registrar</button>
                             </div>
                         </div>
