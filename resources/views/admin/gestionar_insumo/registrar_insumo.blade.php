@@ -39,10 +39,6 @@
                                 <label for="procedencia">Procedencia:</label>
                             </div>
 
-                            <div class="col s12  input-field">
-                                <input id="Perteneciente" name="Perteneciente" type="text" class="validate">
-                                <label for="Perteneciente">Perteneciente:</label>
-                            </div>
 
                         <div class="row">
                             <div class="col s12 right-align">

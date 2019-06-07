@@ -17,12 +17,11 @@ class CreateProductoTable extends Migration
             $table->bigIncrements('id');
             $table->string('Nombre');
             $table->string('descripcion');
-            $table->string('marca');
+            $table->string('marca')->nullable();
             $table->integer('Costo');
             $table->string('Tipo_producto');
-            $table->string('unidad_de_medida');
+            $table->string('unidad_de_medida')->nullable();
             $table->string('procedencia');
-            $table->string('Perteneciente');
             $table->timestamps();
         });
     }

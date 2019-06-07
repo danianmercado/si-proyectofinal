@@ -142,7 +142,7 @@ Route::group(['prefix'=>'herramienta'], function (){
 ///////////    ALMACEN ///////////////////////////////////////////////////////////////////
 Route::group(['prefix'=>'almacen'], function (){
     Route::get('index','AlmacenController@index' )->name('admin.almacen.index'); ///'admin.gestionar_almacen.index'
-    Route::get('show/{id_almacen}','AlmacenController@show')->name('admin.vehiculo.show');
+    Route::get('show/{id_almacen}','AlmacenController@show')->name('admin.almacen.show');
     Route::get('registrar','AlmacenController@registrar')->name('admin.almacen.registrar');
     Route::post('guardar','AlmacenController@guardar')->name('admin.almacen.guardar');
     Route::get('editar/{id_almacen}','AlmacenController@editar')->name('admin.almacen.editar');
@@ -167,9 +167,18 @@ Route::group(['prefix'=>'insumo'], function (){
 Route::group(['prefix'=>'ingreso_insumo'], function (){
     Route::get('registrar','IngresoInsumoController@registrar')->name('admin.ingreso_insumo.registrar');
     Route::post('guardar','IngresoInsumoController@guardar')->name('admin.ingreso_insumo.guardar');
-    Route::get('editar/{id_ingreso_insumo}','Ingreso_InsumoController@editar')->name('admin.ingreso_insumo.editar');
-    Route::put('modificar/{id_ingreso_insumo}','Ingreso_InsumoController@modificar')->name('admin.ingreso_insumo.modificar');
+    Route::get('editar/{id_ingreso_insumo}','IngresoInsumoController@editar')->name('admin.ingreso_insumo.editar');
+    Route::put('modificar/{id_ingreso_insumo}','IngresoInsumoController@modificar')->name('admin.ingreso_insumo.modificar');
 });
+
+
+///////////    INGRESO DE REPUESTOS ///////////////////////////////////////////////////////////////////
+    Route::group(['prefix'=>'ingreso_repuesto'], function (){
+        Route::get('registrar','IngresoRepuestoController@registrar')->name('admin.ingreso_repuesto.registrar');
+        Route::post('guardar','IngresoRepuestoController@guardar')->name('admin.ingreso_repuesto.guardar');
+        Route::get('editar/{id_ingreso_repuesto}','IngresoRepuestoController@editar')->name('admin.ingreso_repuesto.editar');
+        Route::put('modificar/{id_ingreso_repuesto}','IngresoRepuestoController@modificar')->name('admin.ingreso_repuesto.modificar');
+    });
 
        
 

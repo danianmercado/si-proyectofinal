@@ -36,8 +36,8 @@ class AlmacenController extends Controller
 
     public function modificar(Request $request,$id_almacen){
         $almacen = Almacen::findOrFail($id_almacen);
-        $almacen->Ubicacion = $request['Ubicacion'];
         $almacen->Capacidad = $request['Capacidad'];
+        $almacen->ubicacion = $request['ubicacion'];
         $almacen->save();
         return redirect()->route('admin.almacen.index');
     }
@@ -48,6 +48,43 @@ class AlmacenController extends Controller
     }
     public function delete(Request $request,$id_almacen){
         if($request['eliminar'] == 'ELIMINAR'){
+            $almacen = Almacen::findOrFail($id_almacen);
+            if( (DB::select("SELECT id FROM stock__p where id_almacen=$id_almacen"))!=null   ||  (DB::select("SELECT id FROM stock_h where id_almacen=$id_almacen"))!=null)
+            {
+                DD('Este almacen  no se puede eliminar porque ya tiene insumos');
+
+            } else {
+                $almacen->delete();
+            }
+
+            return redirect()->route('admin.almacen.index');
+        }
+        return redirect()->route('admin.almacen.eliminar', [$id_almacen]);
+    }
+
+
+
+       /* if($request['eliminar'] == 'ELIMINAR'){
+            $almacen = Almacen::findOrFail($id_almacen);
+
+            if( (DB::select("SELECT id FROM stock__p where id_almacen=$id_almacen"))!=null)
+            {
+                DD('Este almacen  no se puede eliminar porque ya tiene insumos');
+
+            } else {
+                $almacen->delete();
+            }
+
+            return redirect()->route('admin.almacen.index');
+        }
+        return redirect()->route('admin.almacen.eliminar', [$id_almacen]);
+    }*/
+
+
+
+        /*
+
+        if($request['eliminar'] == 'ELIMINAR'){
             DB::table('almacen')
                 ->where('id', '=', $id_almacen)
                 ->delete();
@@ -55,5 +92,5 @@ class AlmacenController extends Controller
             return redirect()->route('admin.almacen.index');
         }
         return redirect()->route('admin.almacen.eliminar', [$id_almacen]);
-    }
+    }*/
 }

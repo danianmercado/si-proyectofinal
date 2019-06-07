@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col s12 m10 offset-m1 l6 offset-l3">
 
-            <form action="#" method="POST">
+            <form action="{{route('admin.almacen.guardar')}}" method="POST">
                 @csrf
 				
                 <div class="card z-depth-4">
@@ -11,8 +11,8 @@
                         <span class="card-title center-align">Registrar almacen </span>
                         <div class="row">
                             <div class="col s12 input-field">
-                                <input  id="capacidad" name="capacidad" type="text" class="validate">
-                                <label for="capacidad">capacidad del almacen:</label>
+                                <input  id="Capacidad" name="Capacidad" type="text" class="validate">
+                                <label for="Capacidad">capacidad del almacen:</label>
                             </div>
 
                             <div class="col s12 input-field">
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 </div>
-				
+                </div>
             </form>
 
 

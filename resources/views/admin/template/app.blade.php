@@ -78,7 +78,19 @@
                             <li><a href="{{route('admin.insumo.index')}}" class="waves-effect">Gestionar Insumo<i class="material-icons">list</i></a></li>
                             <li><a href="{{route('admin.herramienta.index')}}" class="waves-effect">Gestionar Herramienta<i class="material-icons">list</i></a></li>
                             <li><a href="{{route('admin.repuesto.index')}}" class="waves-effect">Gestionar Repuesto<i class="material-icons">list</i></a></li>
+                            <ul class="collapsible collapsible-accordion">
+                                <li class="bold waves-effect"><a class="collapsible-header">Stocks<i class="material-icons chevron">chevron_left</i></a>
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            <li><a href="{{route('admin.herramienta.index')}}" class="waves-effect">Gestionar Stock de Insumos<i class="material-icons">list</i></a></li>
+                                            <li><a href="{{route('admin.herramienta.index')}}" class="waves-effect">Gestionar Stock de Repuestos<i class="material-icons">list</i></a></li>
+                                            <li><a href="{{route('admin.herramienta.index')}}" class="waves-effect">Gestionar Stock de Herramientas<i class="material-icons">list</i></a></li>
+                                        </ul>
 
+                                    </div>
+
+                                </li>
+                            </ul>
                         </ul>
                     </div>
                 </li>

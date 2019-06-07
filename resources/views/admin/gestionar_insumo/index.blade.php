@@ -36,6 +36,12 @@
                 @foreach($insumos as $insumo)
             var fila = [];
             if ('{{$insumo->Tipo_producto}}'=='I'){
+                    @if ($insumo->ingreso_insumo->first()['Cantidad']==null) {
+                    <?php $S = "admin.ingreso_insumo.registrar" ?>
+                }@else{
+                    <?php $S = "admin.ingreso_insumo.editar" ?>
+                }
+                @endif
             fila[0] = '{{$insumo->id}}';
             fila[1] = '{{$insumo->Nombre}}';
             fila[2] = '{{$insumo->descripcion}}';
@@ -46,7 +52,7 @@
                 '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
                 '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.insumo.editar', [$insumo->id])}}" + ' " class="white-text" >Editar</a></span>' +
                 '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.insumo.eliminar', [$insumo->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
-                '<span class="new badge positive-secondary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.ingreso_insumo.registrar', [$insumo->id])}}" + ' " class="white-text" >Ingresar Unidades</a></span>' +
+                '<span class="new badge positive-secondary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route($S , [$insumo->ingreso_insumo->first()['id']])}}" + ' " class="white-text" >Ingresar Unidades</a></span>' +
                 '</div>';
             datos.push(fila);
             }

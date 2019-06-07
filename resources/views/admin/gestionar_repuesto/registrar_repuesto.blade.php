@@ -28,6 +28,10 @@
                                 <label for="Nombre">Nombre:</label>
                             </div>
 
+                            <div class="col s12  input-field">
+                                <input id="marca" name="marca" type="text" class="validate">
+                                <label for="marca">Marca:</label>
+                            </div>
 
                         <div class="row">
                             <div class="col s12 right-align">

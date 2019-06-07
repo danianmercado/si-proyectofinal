@@ -17,6 +17,7 @@
                         <th>Costo</th>
                         <th>Descripcion</th>
                         <th>Nombre</th>
+                        <th>Cantidad</th>
                         <th>Acciones</th>
                     </tr>
 
@@ -35,16 +36,25 @@
             @foreach($repuestos as $repuesto)
             var fila = [];
             if ('{{$repuesto->Tipo_producto}}'=='R'){
+                    @if ($repuesto->ingreso_repuesto->first()['Cantidad']==null) {
+                    <?php $S = "admin.ingreso_repuesto.registrar" ?>
+                }@else{
+                    <?php $S = "admin.ingreso_repuesto.editar" ?>
+                }
+                @endif
             fila[0] = '{{$repuesto->id}}';
             fila[1] = '{{$repuesto->procedencia}}';
             fila[2] = '{{$repuesto->Costo}}';
             fila[3] = '{{$repuesto->descripcion}}';
             fila[4] = '{{$repuesto->Nombre}}';
-            fila[5] = '<div>' +
+            fila[5] = '{{$repuesto->ingreso_repuesto->first()['Cantidad']}}';
+                fila[6] = '<div>' +
                 '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
                 '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.repuesto.editar', [$repuesto->id])}}" + ' " class="white-text" >Editar</a></span>' +
                 '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.repuesto.eliminar', [$repuesto->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
+                '<span class="new badge positive-secondary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route($S , [$repuesto->ingreso_repuesto->first()['id']])}}" + ' " class="white-text" >Ingresar Unidades</a></span>' +
                 '</div>';
+
             
             datos.push(fila);
             }

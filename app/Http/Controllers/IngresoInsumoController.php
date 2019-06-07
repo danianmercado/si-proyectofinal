@@ -30,20 +30,17 @@ class IngresoInsumoController extends Controller
         $almacenes = Almacen::all();
         return View('admin.gestionar_ingreso.editar_ingreso_insumo', ['ingreso_insumo' => $ingreso_insumo,'insumos' => $insumos,'almacenes' => $almacenes]);
     }
-    
+
 
     public function modificar(Request $request,$id_ingreso_insumo){
-        $id_ingreso_insumo = Ingreso_Insumo::findOrFail($id_ingreso_insumo);
-        $id_ingreso_insumo->id_almacen = $request['id_almacen'];
-        $id_ingreso_insumo->id_producto = $request['id_producto'];
-        $id_ingreso_insumo->Cantidad = $request['Cantidad'];
-        $id_ingreso_insumo->save();
-        if( (DB::select("SELECT id FROM stock__p where id=$id_ingreso_insumo"))!=null)
-        {   
-            $cant=(DB::select("SELECT top(Cantidad) FROM stock__p where id=$id_ingreso_insumo"));
-            $suma=$cant;
-    
-        }
+        $ingreso_insumo = Ingreso_Insumo::findOrFail($id_ingreso_insumo);
+        $ingreso_insumo->id_almacen = $request['id_almacen'];
+        $ingreso_insumo->id_producto = $request['id_producto'];
+        $cant=($ingreso_insumo->Cantidad);
+        $ingreso_insumo->Cantidad = $request['Cantidad'];
+        $suma=$cant+ $ingreso_insumo->Cantidad;
+        $ingreso_insumo->Cantidad = $suma;
+        $ingreso_insumo->save();
         return redirect()->route('admin.insumo.index');
     }
 }

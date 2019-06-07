@@ -13,7 +13,7 @@
 
                             <label>Seleccionar</label>
                             <select class="browser-default" name="id_vehiculo" >
-                                <option value="{{$recepcion->vehiculo->placa}}" >{{$recepcion->vehiculo->placa}}</option>
+                                <option value="{{$recepcion->id_vehiculo}}" >{{$recepcion->vehiculo->placa}}</option>
                                 @foreach($vehiculos as $vehiculo)
                                     <option value="{{$vehiculo->id}}">{{$vehiculo->placa}}</option>
 
@@ -47,7 +47,7 @@
                 </div>
 
 
-
+                </div>
 
             </form>
 
