@@ -3,8 +3,9 @@
     <div class="row">
         <div class="col s12 m10 offset-m1 l6 offset-l3">
 
-            <form action="#" method="POST">
+            <form action="{{route('admin.trabajador.guardar')}}" method="POST">
                 @csrf
+
                 <div class="card z-depth-4">
                     <div class="card-content">
                         <span class="card-title center-align">Registrar Trabajador</span>
@@ -20,33 +21,33 @@
                             </div>
 
                             <div class="col s12 input-field">
-                                <input id="apellidop" name="apellidop" type="text" class="validate">
-                                <label for="apellidop">Apellido Paterno :</label>
+                                <input id="paterno" name="paterno" type="text" class="validate">
+                                <label for="paterno">Apellido Paterno :</label>
                             </div>
 
                             <div class="col s12 input-field">
-                                <input id="apellidom" name="apellidom" type="text" class="validate">
-                                <label for="apellidom">Apellido Materno :</label>
+                                <input id="materno" name="materno" type="text" class="validate">
+                                <label for="materno">Apellido Materno :</label>
                             </div>
 
                             <div class="col s12  input-field">
-                                <input id="Fecha_n" name="Fecha_n" type="text" class="datepicker">
-                                <label for="Fecha_n">Fecha de Nacimiento :</label>
+                                <input id="fecha_nacimiento" name="fecha_nacimiento" type="text" class="datepicker">
+                                <label for="fecha_nacimiento">Fecha de Nacimiento :</label>
                             </div>
 
                             <div class="col s12 input-field">
-                                <input id="direc" name="direc" type="text" class="validate">
-                                <label for="direc">Direccion :</label>
+                                <input id="direccion" name="direccion" type="text" class="validate">
+                                <label for="direccion">Direccion :</label>
                             </div>
 
                             <div class="col s12 input-field">
-                                <input id="telf" name="telf" type="text" class="validate">
-                                <label for="telf">Telefono :</label>
+                                <input id="telefono" name="telefono" type="text" class="validate">
+                                <label for="telefono">Telefono :</label>
                             </div>
 
                             <div class="col s12 input-field">
-                                <input id="esp" name="esp" type="text" class="validate">
-                                <label for="esp">Especialidad :</label>
+                                <input id="especialidad" name="especialidad" type="text" class="validate">
+                                <label for="especialidad">Especialidad :</label>
                             </div>
                         </div>
 

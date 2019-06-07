@@ -91,6 +91,17 @@ Route::group(['prefix'=>'admin'], function (){
         Route::get('eliminar/{id_diagnostico}','DiagnosticoController@eliminar')->name('admin.diagnostico.eliminar');
         Route::delete('delete/{id_diagnostico}','DiagnosticoController@delete')->name('admin.diagnostico.delete');
     });
+    ///////////   ORDEN DE TRABAJO ///////////////////////////////////////////////////////////////////
+    Route::group(['prefix'=>'orden_trabajo'], function (){
+        Route::get('index','OrdenTrabajoController@index')->name('admin.orden_trabajo.index');
+        Route::get('show/{id_orden_trabajo}','OrdenTrabajoController@show')->name('admin.orden_trabajo.show');
+        Route::get('registrar','OrdenTrabajoController@registrar')->name('admin.orden_trabajo.registrar');
+        Route::post('guardar','OrdenTrabajoController@guardar')->name('admin.orden_trabajo.guardar');
+        Route::get('editar/{id_orden_trabajo}','OrdenTrabajoController@editar')->name('admin.orden_trabajo.editar');
+        Route::put('modificar/{id_orden_trabajo}','OrdenTrabajoController@modificar')->name('admin.orden_trabajo.modificar');
+        Route::get('eliminar/{id_orden_trabajo}','OrdenTrabajoController@eliminar')->name('admin.orden_trabajo.eliminar');
+        Route::delete('delete/{id_orden_trabajo}','OrdenTrabajoController@delete')->name('admin.orden_trabajo.delete');
+    });
 ///////////    SERVICIO ///////////////////////////////////////////////////////////////////
         Route::group(['prefix'=>'servicio'], function (){
             Route::get('index','ServicioController@index' )->name('admin.servicio.index'); ///'admin.gestionar_servicio.index'

@@ -17,7 +17,7 @@
                         <th>Apellido Paterno</th>
                         <th>Apellido Materno</th>
                         <th>Teléfono</th>
-                        <th>Fecha Nacimiento</th>
+                        <th>Especialidad</th>
                         <th>Acciones</th>
                     </tr>
 
@@ -33,21 +33,21 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var datos = [];
-            @for($i = 0; $i < 5; $i++)
+            @foreach($trabajadores as $trabajador)
                 var fila = [];
-                fila[0] = '{{$i}}';
-                fila[1] = 'Rosanyela';
-                fila[2] = 'Hurtado';
-                fila[3] = 'Rico';
-                fila[4] = '70823007';
-                fila[5] = '20-03-1998';
+                fila[0] = '{{$trabajador->id}}';
+                fila[1] = '{{$trabajador->personal->nombre}}';
+                fila[2] = '{{$trabajador->personal->paterno}}';
+                fila[3] = '{{$trabajador->personal->materno}}';
+                fila[4] = '{{$trabajador->personal->telefono}}';
+                fila[5] = '{{$trabajador->especialidad}}';
                 fila[6] = '<div>' +
-                    '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
-                    '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Editar</a></span>' +
-                    '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Eliminar</a></span>' +
+                    '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.trabajador.show', [$trabajador->id])}}" + ' "  class="white-text" >Detalle</a></span>' +
+                    '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.trabajador.editar', [$trabajador->id])}}" + ' " class="white-text" >Editar</a></span>' +
+                    '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.trabajador.eliminar', [$trabajador->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
                     '</div>';
                 datos.push(fila);
-            @endfor
+            @endforeach
             addDatosGeneral(datos);
         });
 
