@@ -14,4 +14,11 @@ class Bitacora extends Model
     {
         return $this->belongsTo('App\User','id_usuario');
     }
+
+    public static function tupla_bitacora($accion){
+      $tupla_bitacora = new Bitacora();
+      $tupla_bitacora->id_usuario = \Auth::user()->id;
+      $tupla_bitacora->accion = $accion;
+      $tupla_bitacora->save();
+    }
 }
