@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PersonalStoreRequest extends FormRequest
+class AdministrativoStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class PersonalStoreRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -24,12 +24,7 @@ class PersonalStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre'=>'required|string',
-            'paterno'=>'required|string',
-            'materno'=>'nullable|string',
-            'direccion'=>'nullable|string',
-            'telefono'=>'nullable|integer|unique:personal',
-            'fecha_nacimiento'=>'required|date'
+            //
         ];
     }
 }

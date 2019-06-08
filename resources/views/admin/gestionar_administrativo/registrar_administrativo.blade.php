@@ -3,11 +3,12 @@
     <div class="row">
         <div class="col s12 m10 offset-m1 l6 offset-l3">
 
-            <form action="#" method="POST">
+            <form action="{{route('admin.administrativo.guardar')}}" method="POST">
                 @csrf
+
                 <div class="card z-depth-4">
                     <div class="card-content">
-                        <span class="card-title center-align">Registrar Trabajador</span>
+                        <span class="card-title center-align">Registrar Administrativo</span>
                         <div class="row">
                             <div class="col s12 input-field">
                                 <input  id="id" name="id" type="text" class="validate">
@@ -29,24 +30,25 @@
                                 <label for="materno">Apellido Materno :</label>
                             </div>
 
+                            <div class="col s12  input-field">
+                                <input id="fecha_nacimiento" name="fecha_nacimiento" type="text" class="datepicker">
+                                <label for="fecha_nacimiento">Fecha de Nacimiento :</label>
+                            </div>
 
                             <div class="col s12 input-field">
                                 <input id="direccion" name="direccion" type="text" class="validate">
                                 <label for="direccion">Direccion :</label>
                             </div>
 
+                            <div class="col s12 input-field">
+                                <input id="telefono" name="telefono" type="text" class="validate">
+                                <label for="telefono">Telefono :</label>
+                            </div>
 
                             <div class="col s12 input-field">
-                                <input id="telfono" name="telfono" type="text" class="validate">
-                                <label for="telfono">Telefono :</label>
+                                <input id="area" name="area" type="text" class="validate">
+                                <label for="area">Area :</label>
                             </div>
-
-                            <div class="col s12  input-field">
-                                <input id="fecha_nacimiento" name="fecha_nacimiento" type="text" class="datepicker">
-                                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-                            </div>
-
-
                         </div>
 
                         <div class="row">

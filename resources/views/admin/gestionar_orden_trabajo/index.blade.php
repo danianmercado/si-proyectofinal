@@ -3,7 +3,7 @@
 
     <div class="row">
         <div class="col s12">
-            <a href="{{route('admin.orden_trabajo.registrar')}}" class="waves-effect waves-light btn positive-primary-color"><i class="material-icons right">add_box</i>Registrar Recepcion</a>
+            <a href="{{route('admin.orden_trabajo.registrar')}}" class="waves-effect waves-light btn positive-primary-color"><i class="material-icons right">add_box</i>Registrar Orden de trabajo</a>
         </div>
     </div>
 
@@ -15,7 +15,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Tiempo Estimado</th>
-                        <th>Trabajador</th>
+                        <th>Encargado</th>
                         <th>Vehiculo</th>
                         <th>Acciones</th>
 
@@ -43,7 +43,8 @@
                     '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.orden_trabajo.show', [$orden->id])}}" + ' " class="white-text" >Detalle</a></span>' +
                     '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.orden_trabajo.editar', [$orden->id])}}" + ' " class="white-text" >Editar</a></span>' +
                     '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.orden_trabajo.eliminar', [$orden->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
-                    '</div>';
+                    '<span class="new badge positive-secondary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Añadir detalle de trabajo</a></span>' +
+            '</div>';
                 datos.push(fila);
             @endforeach
             addDatosGeneral(datos);

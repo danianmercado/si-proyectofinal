@@ -29,7 +29,7 @@ class TrabajadorController extends Controller
 
         $trabajador = new Trabajador();
         $trabajador->especialidad = $request['especialidad'];
-        $trabajador->id_personal = $persona->id;
+        $trabajador->id = $request['id'];
         $trabajador->save();
 
         return redirect()->route('admin.trabajador.index');

@@ -57,6 +57,22 @@ Route::group(['prefix'=>'admin'], function (){
         Route::get('eliminar/{id_trabajador}','TrabajadorController@eliminar')->name('admin.trabajador.eliminar');
         Route::delete('delete/{id_trabajador}','TrabajadorController@delete')->name('admin.trabajador.delete');
     });
+    //////////////////////administrativo//////////////////
+    Route::group(['prefix'=>'administrativo'], function (){
+        Route::get('index', 'AdministrativoController@index')->name('admin.administrativo.index');
+        Route::get('show/{id_administrativo}','AdministrativoController@show')->name('admin.administrativo.show');
+        Route::get('registrar', 'AdministrativoController@registrar')->name('admin.administrativo.registrar');
+        Route::post('guardar','AdministrativoController@guardar')->name('admin.administrativo.guardar');
+        Route::get('editar/{id_administrativo}','AdministrativoController@editar')->name('admin.administrativo.editar');
+        Route::put('modificar/{id_administrativo}','AdministrativoController@modificar')->name('admin.administrativo.modificar');
+        Route::get('eliminar/{id_administrativo}','AdministrativoController@eliminar')->name('admin.administrativo.eliminar');
+        Route::delete('delete/{id_administrativo}','AdministrativoController@delete')->name('admin.administrativo.delete');
+    });
+
+
+
+
+
 ////////////     VEHICULO ///////////////////////////////////////////////////////////
         Route::group(['prefix'=>'vehiculo'], function (){
             Route::get('index','VehiculoController@index')->name('admin.vehiculo.index'); ///'admin.gestionar_vehiculo.index'
@@ -162,6 +178,7 @@ Route::group(['prefix'=>'almacen'], function (){
     Route::delete('delete/{id_almacen}','AlmacenController@delete')->name('admin.almacen.delete');
 });
 
+///////////   INSUMOS //////////////////////////////////////////////////////////////////
 Route::group(['prefix'=>'insumo'], function (){
     Route::get('index', 'InsumoController@index')->name('admin.insumo.index');
     Route::get('show/{id}', 'InsumoController@show')->name('admin.insumo.show');

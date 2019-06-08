@@ -32,7 +32,7 @@ class PersonalController extends Controller
     }
 
     public function modificar(Request $request,$id_personal){
-        $personal = Cliente::findOrFail($id_personal);
+        $personal = Personal::findOrFail($id_personal);
         $personal->nombre = $request['nombre'];
         $personal->paterno = $request['paterno'];
         $personal->materno = $request['materno'];

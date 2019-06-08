@@ -14,7 +14,7 @@ class CreatePersonalTable extends Migration
     public function up()
     {
         Schema::create('personal', function (Blueprint $table) {
-            $table->bigIncrements('id');/** carnet de identidad **/
+            $table->unsignedBigInteger('id')->primary();/** carnet de identidad **/
             $table->string('nombre');
             $table->string('paterno');
             $table->string('materno');

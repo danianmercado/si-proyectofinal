@@ -46,7 +46,7 @@
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="{{route('admin.trabajador.index')}}" class="waves-effect">Trabajador<i class="material-icons">list</i></a></li>
-
+                            <li><a href="{{route('admin.administrativo.index')}}" class="waves-effect">Administrativo<i class="material-icons">list</i></a></li>
                         </ul>
 
                 <li class="bold waves-effect"><a class="collapsible-header">recepciones<i class="material-icons chevron">chevron_left</i></a>
@@ -61,12 +61,22 @@
                 </li>
 
 
-                <li class="bold waves-effect"><a class="collapsible-header">Servicio<i class="material-icons chevron">chevron_left</i></a>
+                <li class="bold waves-effect"><a class="collapsible-header">Servicios<i class="material-icons chevron">chevron_left</i></a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="{{route('admin.servicio.index')}}" class="waves-effect">Gestionar Servicio<i class="material-icons">list</i></a></li>
                             <li><a href="{{route('admin.servicio_tercerizado.index')}}" class="waves-effect">Gestionar Servicio Tercerizados<i class="material-icons">list</i></a></li>
 
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="bold waves-effect"><a class="collapsible-header">Trabajos<i class="material-icons chevron">chevron_left</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="{{route('admin.orden_trabajo.index')}}" class="waves-effect">Gestionar Orden de trabajo<i class="material-icons">list</i></a></li>
+                            <li><a href="{{route('admin.servicio_tercerizado.index')}}" class="waves-effect">Gestionar detalles de trabajo<i class="material-icons">list</i></a></li>
+                            <li><a href="{{route('admin.servicio_tercerizado.index')}}" class="waves-effect">Gestionar nota de reparacion<i class="material-icons">list</i></a></li>
                         </ul>
                     </div>
                 </li>

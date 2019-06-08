@@ -11,8 +11,8 @@
                         <span class="card-title center-align">Registrar Trabajador</span>
                         <div class="row">
                             <div class="col s12 input-field">
-                                <input  id="ci" name="ci" type="text" class="validate">
-                                <label for="ci">Carnet de Identidad :</label>
+                                <input  id="id" name="id" type="text" class="validate">
+                                <label for="id">Carnet de Identidad :</label>
                             </div>
 
                             <div class="col s12 input-field">

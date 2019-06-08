@@ -9,10 +9,14 @@ class Personal extends Model
 {
 
     protected $table = 'personal';
-    protected $fillable = ['nombre', 'paterno', 'materno', 'direccion', 'telefono', 'fecha_nacimiento'];
+    protected $fillable = ['id','nombre', 'paterno', 'materno', 'direccion', 'telefono', 'fecha_nacimiento'];
 
-    public function user()
+    public function trabajador()
     {
-        return $this->hasOne('App\User', 'id_personal');
+        return $this->hasOne('App\Trabajador', 'id_personal');
+
+    }
+    public function administrativo(){
+        return $this->hasOne('App\Administrativo', 'id_personal');
     }
 }

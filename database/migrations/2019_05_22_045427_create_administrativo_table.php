@@ -14,12 +14,12 @@ class CreateAdministrativoTable extends Migration
     public function up()
     {
         Schema::create('administrativo', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->unsignedBigInteger('id')->primary();
             $table->string('area');
-            $table->unsignedBigInteger('id_personal')->nullable();/** a la llave foranea siempre ponerle eso :v */
+           /** a la llave foranea siempre ponerle eso :v */
             $table->timestamps();
 
-            $table->foreign('id_personal')->references('id')->on('personal');
+            $table->foreign('id')->references('id')->on('personal');
         });
     }
 
