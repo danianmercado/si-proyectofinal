@@ -42,20 +42,34 @@
         </li>
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
+
                 <li class="bold waves-effect"><a class="collapsible-header">personal<i class="material-icons chevron">chevron_left</i></a>
                     <div class="collapsible-body">
                         <ul>
-                            <li><a href="{{route('admin.trabajador.index')}}" class="waves-effect">Trabajador<i class="material-icons">list</i></a></li>
-                            <li><a href="{{route('admin.administrativo.index')}}" class="waves-effect">Administrativo<i class="material-icons">list</i></a></li>
+                            @can('trabajador.index')
+                                <li><a href="{{route('admin.trabajador.index')}}" class="waves-effect">Trabajador<i class="material-icons">list</i></a></li>
+                            @endcan
+                            @can('admin.index')
+                                <li><a href="{{route('admin.administrativo.index')}}" class="waves-effect">Administrativo<i class="material-icons">list</i></a></li>
+                            @endcan
                         </ul>
+
 
                 <li class="bold waves-effect"><a class="collapsible-header">recepciones<i class="material-icons chevron">chevron_left</i></a>
                     <div class="collapsible-body">
                         <ul>
+                            @can('recepcion.index')
                             <li><a href="{{route('admin.recepcion.index')}}" class="waves-effect">Gestionar recepcion<i class="material-icons">list</i></a></li>
+                            @endcan
+                            @can('cliente.index')
                             <li><a href="{{route('admin.cliente.index')}}" class="waves-effect">Gestionar cliente<i class="material-icons">list</i></a></li>
+                            @endcan
+                            @can('vehiculo.index')
                             <li><a href="{{route('admin.vehiculo.index')}}" class="waves-effect">Gestionar vehiculo<i class="material-icons">list</i></a></li>
+                             @endcan
+                             @can('diagnostico.index')
                             <li><a href="{{route('admin.diagnostico.index')}}" class="waves-effect">Gestionar diagnostico<i class="material-icons">list</i></a></li>
+                             @endcan
                         </ul>
                     </div>
                 </li>
@@ -64,8 +78,13 @@
                 <li class="bold waves-effect"><a class="collapsible-header">Servicios<i class="material-icons chevron">chevron_left</i></a>
                     <div class="collapsible-body">
                         <ul>
+                            @can('servicio.index')
                             <li><a href="{{route('admin.servicio.index')}}" class="waves-effect">Gestionar Servicio<i class="material-icons">list</i></a></li>
+                            @endcan
+                            @can('servicio_tercerizado.index')
                             <li><a href="{{route('admin.servicio_tercerizado.index')}}" class="waves-effect">Gestionar Servicio Tercerizados<i class="material-icons">list</i></a></li>
+                            @endcan
+
 
                         </ul>
                     </div>
@@ -74,7 +93,10 @@
                 <li class="bold waves-effect"><a class="collapsible-header">Trabajos<i class="material-icons chevron">chevron_left</i></a>
                     <div class="collapsible-body">
                         <ul>
+                            @can('orden_trabajo.index')
                             <li><a href="{{route('admin.orden_trabajo.index')}}" class="waves-effect">Gestionar Orden de trabajo<i class="material-icons">list</i></a></li>
+                            @endcan
+
                             <li><a href="{{route('admin.servicio_tercerizado.index')}}" class="waves-effect">Gestionar detalles de trabajo<i class="material-icons">list</i></a></li>
                             <li><a href="{{route('admin.servicio_tercerizado.index')}}" class="waves-effect">Gestionar nota de reparacion<i class="material-icons">list</i></a></li>
                         </ul>

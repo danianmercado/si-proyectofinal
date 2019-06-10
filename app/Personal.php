@@ -9,7 +9,7 @@ class Personal extends Model
 {
 
     protected $table = 'personal';
-    protected $fillable = ['id','nombre', 'paterno', 'materno', 'direccion', 'telefono', 'fecha_nacimiento'];
+    protected $fillable = ['id','ci','nombre', 'paterno', 'materno', 'direccion', 'telefono', 'fecha_nacimiento'];
 
     public function trabajador()
     {

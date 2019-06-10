@@ -18,11 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->unsignedBigInteger('id_personal')->nullable();
-            $table->unsignedBigInteger('id_privilegio')->nullable();
             $table->timestamps();
 
             $table->foreign('id_personal')->references('id')->on('personal');
-            $table->foreign('id_privilegio')->references('id')->on('privilegio');
         });
     }
 

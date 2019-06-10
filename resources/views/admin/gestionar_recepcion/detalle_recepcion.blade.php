@@ -36,7 +36,7 @@
                     </div>
 
                 </div>
-                <div class="card-action cancel-primary-color">
+                <div class="card-action cancel-primary-color right-align">
                     <a href="{{route('admin.recepcion.index')}}" class="btn negative-primary-color" type="submit">aceptar</a>
 
                 </div>

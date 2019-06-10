@@ -11,6 +11,6 @@ class Administrativo extends Model
 
     public function personal()
     {
-        return $this->belongsTo('App\Personal', 'id');
+        return $this->belongsTo('App\Personal', 'id_personal');
     }
 }

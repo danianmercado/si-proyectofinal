@@ -13,7 +13,7 @@ class AdministrativoStoreRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,17 @@ class AdministrativoStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'ci'=>'required|integer|unique:personal',
+            'nombre'=>'required|string|min:5|max:40',
+            'paterno'=>'nullable|string|min:2|max:40',
+            'materno'=>'nullable|string|min:2|max:40',
+            'fecha_nacimiento' => 'required|date',
+            'direccion' => 'nullable|string',
+            'telefono'=>'required',
+            'area' => 'required|string',
+            'email'=>'nullable|email',
+            'password'=>'required|confirmed',
+            'id_permiso' => 'required'
         ];
     }
 }

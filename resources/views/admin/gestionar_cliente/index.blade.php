@@ -2,7 +2,9 @@
 @section('contenido')
     <div class="row">
         <div class="col s12">
+            @can('cliente.create')
             <a href="{{route('admin.cliente.registrar')}}" class="waves-effect waves-light btn positive-primary-color"><i class="material-icons right">add_box</i>Registrar Cliente</a>
+            @endcan
         </div>
     </div>
 
@@ -38,9 +40,15 @@
                 fila[2] = '{{$cliente->telefono}}';
                 fila[3] = '{{$cliente->correo_electronico}}';
                 fila[4] = '<div>' +
+                    @can('cliente.show')
                     '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.cliente.show', [$cliente->id])}}" + ' " class="white-text" >Detalle</a></span>' +
+                    @endcan
+                    @can('cliente.edit')
                     '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.cliente.editar', [$cliente->id])}}" + ' " class="white-text" >Editar</a></span>' +
+                    @endcan
+                    @can('cliente.delete')
                     '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.cliente.eliminar', [$cliente->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
+                    @endcan
                     '</div>';
                 datos.push(fila);
             @endforeach

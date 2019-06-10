@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePrivilegioTable extends Migration
+class CreateTrabajadorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreatePrivilegioTable extends Migration
      */
     public function up()
     {
-        Schema::create('privilegio', function (Blueprint $table) {
+        Schema::create('trabajador', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('roles');
+            $table->string('especialidad');
+            /** nullable :v que puede ser nulo lel */
+            $table->unsignedBigInteger('id_personal')->nullable();
             $table->timestamps();
+            $table->foreign('id_personal')->references('id')->on('personal');
         });
     }
 
@@ -27,6 +30,6 @@ class CreatePrivilegioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('privilegio');
+        Schema::dropIfExists('trabajador');
     }
 }

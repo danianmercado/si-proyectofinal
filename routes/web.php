@@ -36,37 +36,37 @@ Route::group(['prefix'=>'admin'], function (){
 
 /////////////    CLIENTE ////////////////////////////////////////////////////////
         Route::group(['prefix'=>'cliente'], function (){
-            Route::get('index', 'ClienteController@index')->name('admin.cliente.index');
-            Route::get('show/{id_cliente}','ClienteController@show')->name('admin.cliente.show');
-            Route::get('registrar', 'ClienteController@registrar')->name('admin.cliente.registrar');
-            Route::post('guardar','ClienteController@guardar')->name('admin.cliente.guardar');
-            Route::get('editar/{id_cliente}','ClienteController@editar')->name('admin.cliente.editar');
-            Route::put('modificar/{id_cliente}','ClienteController@modificar')->name('admin.cliente.modificar');
-            Route::get('eliminar/{id_cliente}','ClienteController@eliminar')->name('admin.cliente.eliminar');
-            Route::delete('delete/{id_cliente}','ClienteController@delete')->name('admin.cliente.delete');
+            Route::get('index', 'ClienteController@index')->name('admin.cliente.index')->middleware('can:cliente.index');
+            Route::get('show/{id_cliente}','ClienteController@show')->name('admin.cliente.show')->middleware('can:cliente.show');
+            Route::get('registrar', 'ClienteController@registrar')->name('admin.cliente.registrar')->middleware('can:cliente.create');
+            Route::post('guardar','ClienteController@guardar')->name('admin.cliente.guardar')->middleware('can:cliente.create');
+            Route::get('editar/{id_cliente}','ClienteController@editar')->name('admin.cliente.editar')->middleware('can:cliente.edit');
+            Route::put('modificar/{id_cliente}','ClienteController@modificar')->name('admin.cliente.modificar')->middleware('can:cliente.edit');
+            Route::get('eliminar/{id_cliente}','ClienteController@eliminar')->name('admin.cliente.eliminar')->middleware('can:cliente.delete');
+            Route::delete('delete/{id_cliente}','ClienteController@delete')->name('admin.cliente.delete')->middleware('can:cliente.delete');
         });
 //////////////////////trabajador//////////////////
 
    Route::group(['prefix'=>'trabajador'], function (){
-        Route::get('index', 'TrabajadorController@index')->name('admin.trabajador.index');
-        Route::get('show/{id_trabajador}','TrabajadorController@show')->name('admin.trabajador.show');
-        Route::get('registrar', 'TrabajadorController@registrar')->name('admin.trabajador.registrar');
-        Route::post('guardar','TrabajadorController@guardar')->name('admin.trabajador.guardar');
-        Route::get('editar/{id_trabajador}','TrabajadorController@editar')->name('admin.trabajador.editar');
-        Route::put('modificar/{id_trabajador}','TrabajadorController@modificar')->name('admin.trabajador.modificar');
-        Route::get('eliminar/{id_trabajador}','TrabajadorController@eliminar')->name('admin.trabajador.eliminar');
-        Route::delete('delete/{id_trabajador}','TrabajadorController@delete')->name('admin.trabajador.delete');
+        Route::get('index', 'TrabajadorController@index')->name('admin.trabajador.index')->middleware('can:trabajador.index');
+        Route::get('show/{id_trabajador}','TrabajadorController@show')->name('admin.trabajador.show')->middleware('can:trabajador.show');
+        Route::get('registrar', 'TrabajadorController@registrar')->name('admin.trabajador.registrar')->middleware('can:trabajador.create');
+        Route::post('guardar','TrabajadorController@guardar')->name('admin.trabajador.guardar')->middleware('can:trabajador.create');
+        Route::get('editar/{id_trabajador}','TrabajadorController@editar')->name('admin.trabajador.editar')->middleware('can:trabajador.edit');
+        Route::put('modificar/{id_trabajador}','TrabajadorController@modificar')->name('admin.trabajador.modificar')->middleware('can:trabajador.edit');
+        Route::get('eliminar/{id_trabajador}','TrabajadorController@eliminar')->name('admin.trabajador.eliminar')->middleware('can:trabajador.delete');
+        Route::delete('delete/{id_trabajador}','TrabajadorController@delete')->name('admin.trabajador.delete')->middleware('can:trabajador.delete');
     });
     //////////////////////administrativo//////////////////
     Route::group(['prefix'=>'administrativo'], function (){
-        Route::get('index', 'AdministrativoController@index')->name('admin.administrativo.index');
-        Route::get('show/{id_administrativo}','AdministrativoController@show')->name('admin.administrativo.show');
-        Route::get('registrar', 'AdministrativoController@registrar')->name('admin.administrativo.registrar');
-        Route::post('guardar','AdministrativoController@guardar')->name('admin.administrativo.guardar');
-        Route::get('editar/{id_administrativo}','AdministrativoController@editar')->name('admin.administrativo.editar');
-        Route::put('modificar/{id_administrativo}','AdministrativoController@modificar')->name('admin.administrativo.modificar');
-        Route::get('eliminar/{id_administrativo}','AdministrativoController@eliminar')->name('admin.administrativo.eliminar');
-        Route::delete('delete/{id_administrativo}','AdministrativoController@delete')->name('admin.administrativo.delete');
+        Route::get('index', 'AdministrativoController@index')->name('admin.administrativo.index')->middleware('can:admin.index');
+        Route::get('show/{id_administrativo}','AdministrativoController@show')->name('admin.administrativo.show')->middleware('can:admin.show');
+        Route::get('registrar', 'AdministrativoController@registrar')->name('admin.administrativo.registrar')->middleware('can:admin.create');
+        Route::post('guardar','AdministrativoController@guardar')->name('admin.administrativo.guardar')->middleware('can:admin.create');
+        Route::get('editar/{id_administrativo}','AdministrativoController@editar')->name('admin.administrativo.editar')->middleware('can:admin.edit');
+        Route::put('modificar/{id_administrativo}','AdministrativoController@modificar')->name('admin.administrativo.modificar')->middleware('can:admin.edit');
+        Route::get('eliminar/{id_administrativo}','AdministrativoController@eliminar')->name('admin.administrativo.eliminar')->middleware('can:admin.delete');
+        Route::delete('delete/{id_administrativo}','AdministrativoController@delete')->name('admin.administrativo.delete')->middleware('can:admin.delete');
     });
 
 
@@ -75,37 +75,37 @@ Route::group(['prefix'=>'admin'], function (){
 
 ////////////     VEHICULO ///////////////////////////////////////////////////////////
         Route::group(['prefix'=>'vehiculo'], function (){
-            Route::get('index','VehiculoController@index')->name('admin.vehiculo.index'); ///'admin.gestionar_vehiculo.index'
-            Route::get('show/{id_vehiculo}','VehiculoController@show')->name('admin.vehiculo.show');
-            Route::get('registrar','VehiculoController@registrar')->name('admin.vehiculo.registrar');//'admin.gestionar_vehiculo.registrar_vehiculo'
-            Route::post('guardar','VehiculoController@guardar')->name('admin.vehiculo.guardar');
-            Route::get('editar/{id_vehiculo}','VehiculoController@editar')->name('admin.vehiculo.editar');
-            Route::put('modificar/{id_vehiculo}','VehiculoController@modificar')->name('admin.vehiculo.modificar');
-            Route::get('eliminar/{id_vehiculo}','VehiculoController@eliminar')->name('admin.vehiculo.eliminar');
-            Route::delete('delete/{id_vehiculo}','VehiculoController@delete')->name('admin.vehiculo.delete');
+            Route::get('index','VehiculoController@index')->name('admin.vehiculo.index')->middleware('can:vehiculo.index'); ///'admin.gestionar_vehiculo.index'
+            Route::get('show/{id_vehiculo}','VehiculoController@show')->name('admin.vehiculo.show')->middleware('can:vehiculo.show');
+            Route::get('registrar','VehiculoController@registrar')->name('admin.vehiculo.registrar')->middleware('can:vehiculo.create');//'admin.gestionar_vehiculo.registrar_vehiculo'
+            Route::post('guardar','VehiculoController@guardar')->name('admin.vehiculo.guardar')->middleware('can:vehiculo.create');
+            Route::get('editar/{id_vehiculo}','VehiculoController@editar')->name('admin.vehiculo.editar')->middleware('can:vehiculo.edit');
+            Route::put('modificar/{id_vehiculo}','VehiculoController@modificar')->name('admin.vehiculo.modificar')->middleware('can:vehiculo.edit');
+            Route::get('eliminar/{id_vehiculo}','VehiculoController@eliminar')->name('admin.vehiculo.eliminar')->middleware('can:vehiculo.delete');
+            Route::delete('delete/{id_vehiculo}','VehiculoController@delete')->name('admin.vehiculo.delete')->middleware('can:vehiculo.delete');
         });
 
 ////////////     RECEPCION ///////////////////////////////////////////////////////////
     Route::group(['prefix'=>'recepcion'], function (){
-        Route::get('index','RecepcionController@index')->name('admin.recepcion.index'); ///'admin.gestionar_recepcion.index'
-        Route::get('show/{id_recepcion}','RecepcionController@show')->name('admin.recepcion.show');
-        Route::get('registrar','RecepcionController@registrar')->name('admin.recepcion.registrar');//'admin.gestionar_recepcion.registrar_recepcion'
-        Route::post('guardar','RecepcionController@guardar')->name('admin.recepcion.guardar');
-        Route::get('editar/{id_recepcion}','RecepcionController@editar')->name('admin.recepcion.editar');
-        Route::put('modificar/{id_recepcion}','RecepcionController@modificar')->name('admin.recepcion.modificar');
-        Route::get('eliminar/{id_recepcion}','RecepcionController@eliminar')->name('admin.recepcion.eliminar');
-        Route::delete('delete/{id_recepcion}','RecepcionController@delete')->name('admin.recepcion.delete');
+        Route::get('index','RecepcionController@index')->name('admin.recepcion.index')->middleware('can:recepcion.index'); ///'admin.gestionar_recepcion.index'
+        Route::get('show/{id_recepcion}','RecepcionController@show')->name('admin.recepcion.show')->middleware('can:recepcion.show');
+        Route::get('registrar','RecepcionController@registrar')->name('admin.recepcion.registrar')->middleware('can:recepcion.create');//'admin.gestionar_recepcion.registrar_recepcion'
+        Route::post('guardar','RecepcionController@guardar')->name('admin.recepcion.guardar')->middleware('can:recepcion.create');
+        Route::get('editar/{id_recepcion}','RecepcionController@editar')->name('admin.recepcion.editar')->middleware('can:recepcion.edit');
+        Route::put('modificar/{id_recepcion}','RecepcionController@modificar')->name('admin.recepcion.modificar')->middleware('can:recepcion.edit');
+        Route::get('eliminar/{id_recepcion}','RecepcionController@eliminar')->name('admin.recepcion.eliminar')->middleware('can:recepcion.delete');
+        Route::delete('delete/{id_recepcion}','RecepcionController@delete')->name('admin.recepcion.delete')->middleware('can:recepcion.delete');
     });
     ///////////   DIAGNOSTICO ///////////////////////////////////////////////////////////////////
     Route::group(['prefix'=>'diagnostico'], function (){
-        Route::get('index','DiagnosticoController@index')->name('admin.diagnostico.index');
-        Route::get('show/{id_diagnostico}','DiagnosticoController@show')->name('admin.diagnostico.show');
-        Route::get('registrar','DiagnosticoController@registrar')->name('admin.diagnostico.registrar');
-        Route::post('guardar','DiagnosticoController@guardar')->name('admin.diagnostico.guardar');
-        Route::get('editar/{id_diagnostico}','DiagnosticoController@editar')->name('admin.diagnostico.editar');
-        Route::put('modificar/{id_diagnostico}','DiagnosticoController@modificar')->name('admin.diagnostico.modificar');
-        Route::get('eliminar/{id_diagnostico}','DiagnosticoController@eliminar')->name('admin.diagnostico.eliminar');
-        Route::delete('delete/{id_diagnostico}','DiagnosticoController@delete')->name('admin.diagnostico.delete');
+        Route::get('index','DiagnosticoController@index')->name('admin.diagnostico.index')->middleware('can:diagnostico.index');
+        Route::get('show/{id_diagnostico}','DiagnosticoController@show')->name('admin.diagnostico.show')->middleware('can:diagnostico.show');
+        Route::get('registrar','DiagnosticoController@registrar')->name('admin.diagnostico.registrar')->middleware('can:diagnostico.create');
+        Route::post('guardar','DiagnosticoController@guardar')->name('admin.diagnostico.guardar')->middleware('can:diagnostico.create');
+        Route::get('editar/{id_diagnostico}','DiagnosticoController@editar')->name('admin.diagnostico.editar')->middleware('can:diagnostico.edit');
+        Route::put('modificar/{id_diagnostico}','DiagnosticoController@modificar')->name('admin.diagnostico.modificar')->middleware('can:diagnostico.edit');
+        Route::get('eliminar/{id_diagnostico}','DiagnosticoController@eliminar')->name('admin.diagnostico.eliminar')->middleware('can:diagnostico.delete');
+        Route::delete('delete/{id_diagnostico}','DiagnosticoController@delete')->name('admin.diagnostico.delete')->middleware('can:diagnostico.delete');
     });
     ///////////   ORDEN DE TRABAJO ///////////////////////////////////////////////////////////////////
     Route::group(['prefix'=>'orden_trabajo'], function (){
