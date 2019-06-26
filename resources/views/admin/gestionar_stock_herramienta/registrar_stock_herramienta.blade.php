@@ -9,7 +9,7 @@
                     <div class="card-content">
                    
 
-                        <span class="card-title center-align">Registrar stock</span>
+                        <span class="card-title center-align">Registrar stock de herramienta</span>
                         <div class="row">
                         <div class="col s12 input-field">
                                 <select name="id_herramienta">

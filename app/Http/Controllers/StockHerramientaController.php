@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\DB;
 class StockHerramientaController extends Controller
 {
     public function index(){
-        $stock_herramientas=Stock_herramienta::all();
+        $stock_herramientas = Stock_herramienta::all();
         return view('admin.gestionar_stock_herramienta.index',['stock_herramientas'=>$stock_herramientas]);
     }
 
     public function show($id_herramienta){
         $stock_herramienta = Stock_herramienta::findOrFail($id_herramienta);
-        return View('admin.gestionar_stock_herramienta.detalle_herramienta', ['stock_herramienta' => $stock_herramienta]);
+        return View('admin.gestionar_stock_herramienta.detalle_stock_herramienta', ['stock_herramienta' => $stock_herramienta]);
 
     }
     public function registrar(){

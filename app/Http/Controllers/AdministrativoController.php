@@ -58,4 +58,29 @@ class AdministrativoController extends Controller
         return redirect()->route('admin.administrativo.index');
     }
 
+    public function editar($id)
+    {
+        $admin = Administrativo::findOrFail($id);
+        return view('admin.gestionar_trabajador.editar_trabajador', ['admin'=>$admin]);
+    }
+
+
+    public function eliminar($id)
+    {
+        $admin = Administrativo::findOrFail($id);
+        return view('admin.gestionar_administrativo.eliminar_administrativo', ['admin'=>$admin]);
+    }
+
+    public function delete(Request $request, $id)
+    {
+        if($request['eliminar'] == 'INACTIVO'){
+            $admin = Administrativo::findOrFail($id);
+            DB::table('role_user')
+                ->where('user_id', '=', $admin->personal->user->id)
+                ->update(['role_id'=>2]);
+            return redirect()->route('admin.administrativo.index');
+        }
+        return redirect()->route('admin.administrativo.eliminar', [$id]);
+    }
+
 }

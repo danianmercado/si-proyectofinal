@@ -205,17 +205,40 @@ Route::group(['prefix'=>'insumo'], function (){
 
 });
 
-///////////   stock_herramienta //////////////////////////////////////////////////////////////////
-    Route::group(['prefix'=>'stock_herramienta'], function (){
-        Route::get('index', 'stock_herramientaController@index')->name('admin.stock_herramienta.index');
-        Route::get('show/{id}', 'stock_herramientaController@show')->name('admin.stock_herramienta.show');
-        Route::get('registrar', 'stock_herramientaController@registrar')->name('admin.stock_herramienta.registrar');
-        Route::post('guardar', 'stock_herramientaController@guardar')->name('admin.stock_herramienta.guardar');
-        Route::get('editar/{id}', 'stock_herramientaController@editar')->name('admin.stock_herramienta.editar');
-        Route::put('modificar/{id}', 'stock_herramientaController@modificar')->name('admin.stock_herramienta.modificar');
-        Route::get('eliminar/{id}', 'stock_herramientaController@eliminar')->name('admin.stock_herramienta.eliminar');
-        Route::delete('delete/{id}', 'stock_herramientaController@delete')->name('admin.stock_herramienta.delete');
+///////////    STOCK DE INSUMOS ///////////////////////////////////////////////////////////////////
+    Route::group(['prefix'=>'stock_insumo'], function (){
+        Route::get('index','StockInsumoController@index' )->name('admin.stock_insumo.index'); ///'admin.gestionar_stock_insumo.index'
+        Route::get('show/{id_stock_insumo}','StockInsumoController@show')->name('admin.stock_insumo.show');
+        Route::get('registrar','StockInsumoController@registrar')->name('admin.stock_insumo.registrar');
+        Route::post('guardar','StockInsumoController@guardar')->name('admin.stock_insumo.guardar');
+        Route::get('editar/{id_stock_insumo}','StockInsumoController@editar')->name('admin.stock_insumo.editar');
+        Route::put('modificar/{id_stock_insumo}','StockInsumoController@modificar')->name('admin.stock_insumo.modificar');
+        Route::get('eliminar/{id_stock_insumo}','StockInsumoController@eliminar')->name('admin.stock_insumo.eliminar');
+        Route::delete('delete/{id_stock_insumo}','StockInsumoController@delete')->name('admin.stock_insumo.delete');
+    });
 
+///////////    STOCK DE REPUESTOS ///////////////////////////////////////////////////////////////////
+    Route::group(['prefix'=>'stock_repuesto'], function (){
+        Route::get('index','StockRepuestoController@index' )->name('admin.stock_repuesto.index'); ///'admin.gestionar_stock_repuesto.index'
+        Route::get('show/{id_stock_repuesto}','StockRepuestoController@show')->name('admin.stock_repuesto.show');
+        Route::get('registrar','StockRepuestoController@registrar')->name('admin.stock_repuesto.registrar');
+        Route::post('guardar','StockRepuestoController@guardar')->name('admin.stock_repuesto.guardar');
+        Route::get('editar/{id_stock_repuesto}','StockRepuestoController@editar')->name('admin.stock_repuesto.editar');
+        Route::put('modificar/{id_stock_repuesto}','StockRepuestoController@modificar')->name('admin.stock_repuesto.modificar');
+        Route::get('eliminar/{id_stock_repuesto}','StockRepuestoController@eliminar')->name('admin.stock_repuesto.eliminar');
+        Route::delete('delete/{id_stock_repuesto}','StockRepuestoController@delete')->name('admin.stock_repuesto.delete');
+    });
+
+///////////    STOCK DE HERRAMIENTAS ///////////////////////////////////////////////////////////////////
+    Route::group(['prefix'=>'stock_herramienta'], function (){
+        Route::get('index','StockHerramientaController@index' )->name('admin.stock_herramienta.index'); ///'admin.gestionar_stock_herramienta.index'
+        Route::get('show/{id_stock_herramienta}','StockHerramientaController@show')->name('admin.stock_herramienta.show');
+        Route::get('registrar','StockHerramientaController@registrar')->name('admin.stock_herramienta.registrar');
+        Route::post('guardar','StockHerramientaController@guardar')->name('admin.stock_herramienta.guardar');
+        Route::get('editar/{id_stock_herramienta}','StockHerramientaController@editar')->name('admin.stock_herramienta.editar');
+        Route::put('modificar/{id_stock_herramienta}','StockHerramientaController@modificar')->name('admin.stock_herramienta.modificar');
+        Route::get('eliminar/{id_stock_herramienta}','StockHerramientaController@eliminar')->name('admin.stock_herramienta.eliminar');
+        Route::delete('delete/{id_stock_herramienta}','StockHerramientaController@delete')->name('admin.stock_herramienta.delete');
     });
 
 ///////////    INGRESO DE INSUMOS ///////////////////////////////////////////////////////////////////

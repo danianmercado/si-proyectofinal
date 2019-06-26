@@ -443,5 +443,11 @@ class UserTableSeeder extends Seeder
           'slug'    => 'admin',
           'special' => 'all-access'
         ]);
+
+        Role::create([
+            'name'    => 'Inactivo',
+            'slug'    => 'inactivo',
+            'special' => 'no-access'
+        ]);
     }
 }

@@ -49,4 +49,30 @@ class TrabajadorController extends Controller
         return redirect()->route('admin.trabajador.index');
     }
 
+    public function editar($id)
+    {
+        $trabajador = Trabajador::findOrFail($id);
+        return view('admin.gestionar_trabajador.editar_trabajador', ['trabajador'=>$trabajador]);
+    }
+
+    public function modificar(Request $request, $id)
+    {
+        $trabajador = Trabajador::findOrFail($id);
+        $trabajador->especialidad = $request['especialidad'];
+
+        $personal = $trabajador->personal;
+        $personal->ci = $request['ci'];
+        $personal->nombre = $request['nombre'];
+        $personal->paterno = $request['paterno'];
+        $personal->materno = $request['materno'];
+        $personal->direccion = $request['direccion'];
+        $personal->fecha_nacimiento = $request['fecha_nacimiento'];
+        $personal->telefono = $request['telefono'];
+        $personal->save();
+
+        $trabajador->save();
+
+        return redirect()->route('admin.trabajador.index');
+    }
+
 }

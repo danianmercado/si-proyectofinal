@@ -113,9 +113,9 @@
                                 <li class="bold waves-effect"><a class="collapsible-header">Stocks<i class="material-icons chevron">chevron_left</i></a>
                                     <div class="collapsible-body">
                                         <ul>
-                                            <li><a href="{{route('admin.herramienta.index')}}" class="waves-effect">Gestionar Stock de Insumos<i class="material-icons">list</i></a></li>
-                                            <li><a href="{{route('admin.herramienta.index')}}" class="waves-effect">Gestionar Stock de Repuestos<i class="material-icons">list</i></a></li>
-                                            <li><a href="{{route('admin.herramienta.index')}}" class="waves-effect">Gestionar Stock de Herramientas<i class="material-icons">list</i></a></li>
+                                            <li><a href="{{route('admin.stock_insumo.index')}}" class="waves-effect">Gestionar Stock de Insumos<i class="material-icons">list</i></a></li>
+                                            <li><a href="{{route('admin.stock_repuesto.index')}}" class="waves-effect">Gestionar Stock de Repuestos<i class="material-icons">list</i></a></li>
+                                            <li><a href="{{route('admin.stock_herramienta.index')}}" class="waves-effect">Gestionar Stock de Herramientas<i class="material-icons">list</i></a></li>
                                         </ul>
 
                                     </div>

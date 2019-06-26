@@ -19,4 +19,9 @@ class Personal extends Model
     public function administrativo(){
         return $this->hasOne('App\Administrativo', 'id_personal');
     }
+
+    public function user()
+    {
+        return $this->hasMany('App\User', 'id_personal');
+    }
 }
