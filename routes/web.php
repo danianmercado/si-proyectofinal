@@ -118,6 +118,18 @@ Route::group(['prefix'=>'admin'], function (){
         Route::get('eliminar/{id_orden_trabajo}','OrdenTrabajoController@eliminar')->name('admin.orden_trabajo.eliminar');
         Route::delete('delete/{id_orden_trabajo}','OrdenTrabajoController@delete')->name('admin.orden_trabajo.delete');
     });
+    ///////////   DETALLE DE TRABAJO ///////////////////////////////////////////////////////////////////
+    Route::group(['prefix'=>'detalle_trabajo'], function (){
+        Route::get('index','DetalleTrabajoController@index')->name('admin.detalle_trabajo.index');
+        Route::get('show/{id_detalle_trabajo}','DetalleTrabajoController@show')->name('admin.detalle_trabajo.show');
+        Route::get('registrar','DetalleTrabajoController@registrar')->name('admin.detalle_trabajo.registrar');
+        Route::post('guardar','DetalleTrabajoController@guardar')->name('admin.detalle_trabajo.guardar');
+        Route::get('editar/{id_detalle_trabajo}','DetalleTrabajoController@editar')->name('admin.detalle_trabajo.editar');
+        Route::put('modificar/{id_detalle_trabajo}','DetalleTrabajoController@modificar')->name('admin.detalle_trabajo.modificar');
+        Route::get('eliminar/{id_detalle_trabajo}','DetalleTrabajoController@eliminar')->name('admin.detalle_trabajo.eliminar');
+        Route::delete('delete/{id_detalle_trabajo}','DetalleTrabajoController@delete')->name('admin.detalle_trabajo.delete');
+    });
+
 ///////////    SERVICIO ///////////////////////////////////////////////////////////////////
         Route::group(['prefix'=>'servicio'], function (){
             Route::get('index','ServicioController@index' )->name('admin.servicio.index'); ///'admin.gestionar_servicio.index'
@@ -129,6 +141,9 @@ Route::group(['prefix'=>'admin'], function (){
             Route::get('eliminar/{id_servicio}','ServicioController@eliminar')->name('admin.servicio.eliminar');
             Route::delete('delete/{id_servicio}','ServicioController@delete')->name('admin.servicio.delete');
         });
+
+
+
 //////////    SERVICIO TERCERIZADO //////////////////////////////////////////////////////////
         Route::group(['prefix'=>'servicio_tercerizado'], function (){
             Route::get('index','ServicioTercerizadoController@index')->name('admin.servicio_tercerizado.index');//'admin.gestionar_servicios_tercerizados.index'
@@ -136,7 +151,7 @@ Route::group(['prefix'=>'admin'], function (){
             Route::get('registrar','ServicioTercerizadoController@registrar' )->name('admin.servicio_tercerizado.registrar'); //'admin.gestionar_servicios_tercerizados.registrar_servicios_tercerizados'
             Route::post('guardar','ServicioTercerizadoController@guardar')->name('admin.servicio_tercerizado.guardar');
             Route::get('editar/{id_servicio_tercerizado}','ServicioTercerizadoController@editar')->name('admin.servicio_tercerizado.editar');
-            Route::put('modificar/{id_servicio_tercerizado}','ServicioTercerizadoController@modificar')->name('admin.servicio_tercerozado.modificar');
+            Route::put('modificar/{id_servicio_tercerizado}','ServicioTercerizadoController@modificar')->name('admin.servicio_tercerizado.modificar');
             Route::get('eliminar/{id_servicio_tercerizado}','ServicioTercerizadoController@eliminar')->name('admin.servicio_tercerizado.eliminar');
             Route::delete('delete/{id_servicio_tercerizado}','ServicioTercerizadoController@delete')->name('admin.servicio_tercerizado.delete');
         });
@@ -144,7 +159,7 @@ Route::group(['prefix'=>'admin'], function (){
 ///////////    REPUESTO ///////////////////////////////////////////////////////////////////
 Route::group(['prefix'=>'repuesto'], function (){
     Route::get('index','RepuestoController@index' )->name('admin.repuesto.index'); ///'admin.gestionar_repuesto.index'
-    Route::get('show/{id_repuesto}','RepuestoController@show')->name('admin.vehiculo.show');
+    Route::get('show/{id_repuesto}','RepuestoController@show')->name('admin.repuesto.show');
     Route::get('registrar','RepuestoController@registrar')->name('admin.repuesto.registrar');
     Route::post('guardar','RepuestoController@guardar')->name('admin.repuesto.guardar');
     Route::get('editar/{id_repuesto}','RepuestoController@editar')->name('admin.repuesto.editar');
@@ -156,7 +171,7 @@ Route::group(['prefix'=>'repuesto'], function (){
 ///////////    HERRAMIENTA ///////////////////////////////////////////////////////////////////
 Route::group(['prefix'=>'herramienta'], function (){
     Route::get('index','HerramientaController@index' )->name('admin.herramienta.index'); ///'admin.gestionar_herramienta.index'
-    Route::get('show/{id_herramienta}','HerramientaController@show')->name('admin.vehiculo.show');
+    Route::get('show/{id_herramienta}','HerramientaController@show')->name('admin.herramienta.show');
     Route::get('registrar','HerramientaController@registrar')->name('admin.herramienta.registrar');
     Route::post('guardar','HerramientaController@guardar')->name('admin.herramienta.guardar');
     Route::get('editar/{id_herramienta}','HerramientaController@editar')->name('admin.herramienta.editar');
@@ -164,7 +179,6 @@ Route::group(['prefix'=>'herramienta'], function (){
     Route::get('eliminar/{id_herramienta}','HerramientaController@eliminar')->name('admin.herramienta.eliminar');
     Route::delete('delete/{id_herramienta}','HerramientaController@delete')->name('admin.herramienta.delete');
 });
-
 
 ///////////    ALMACEN ///////////////////////////////////////////////////////////////////
 Route::group(['prefix'=>'almacen'], function (){
@@ -190,6 +204,19 @@ Route::group(['prefix'=>'insumo'], function (){
     Route::delete('delete/{id}', 'InsumoController@delete')->name('admin.insumo.delete');
 
 });
+
+///////////   stock_herramienta //////////////////////////////////////////////////////////////////
+    Route::group(['prefix'=>'stock_herramienta'], function (){
+        Route::get('index', 'stock_herramientaController@index')->name('admin.stock_herramienta.index');
+        Route::get('show/{id}', 'stock_herramientaController@show')->name('admin.stock_herramienta.show');
+        Route::get('registrar', 'stock_herramientaController@registrar')->name('admin.stock_herramienta.registrar');
+        Route::post('guardar', 'stock_herramientaController@guardar')->name('admin.stock_herramienta.guardar');
+        Route::get('editar/{id}', 'stock_herramientaController@editar')->name('admin.stock_herramienta.editar');
+        Route::put('modificar/{id}', 'stock_herramientaController@modificar')->name('admin.stock_herramienta.modificar');
+        Route::get('eliminar/{id}', 'stock_herramientaController@eliminar')->name('admin.stock_herramienta.eliminar');
+        Route::delete('delete/{id}', 'stock_herramientaController@delete')->name('admin.stock_herramienta.delete');
+
+    });
 
 ///////////    INGRESO DE INSUMOS ///////////////////////////////////////////////////////////////////
 Route::group(['prefix'=>'ingreso_insumo'], function (){

@@ -32,16 +32,16 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var datos = [];
-                @foreach($servicios_tercerizados as $servicio_Tercerizado)
+                @foreach($servicios_tercerizados as $servicio_tercerizado)
             var fila = [];
-            fila[0] =  '{{$servicio_Tercerizado->id}}';
-            fila[1] =  '{{$servicio_Tercerizado->Contacto}}';
-            fila[2] =  '{{$servicio_Tercerizado->Ubicacion}}';
-            fila[3] =  '{{$servicio_Tercerizado->telefono}}';
+            fila[0] =  '{{$servicio_tercerizado->id}}';
+            fila[1] =  '{{$servicio_tercerizado->Contacto}}';
+            fila[2] =  '{{$servicio_tercerizado->Ubicacion}}';
+            fila[3] =  '{{$servicio_tercerizado->telefono}}';
             fila[4] = '<div>' +
-                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
-                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio_tercerizado.editar', [$servicio_Tercerizado->id])}}" + ' " class="white-text" >Editar</a></span>' +
-                '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Eliminar</a></span>' +
+                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio_tercerizado.show', [$servicio_tercerizado->id])}}" + ' " class="white-text" >Detalle</a></span>' +
+                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio_tercerizado.editar', [$servicio_tercerizado->id])}}" + ' " class="white-text" >Editar</a></span>' +
+                '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio_tercerizado.eliminar', [$servicio_tercerizado->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
                 '</div>';
             datos.push(fila);
             @endforeach

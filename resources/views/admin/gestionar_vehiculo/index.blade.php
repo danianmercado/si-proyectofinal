@@ -42,7 +42,7 @@
             fila[4] = '{{$vehiculo->modelo}}';
             fila[5] = '{{$vehiculo->cliente->nombre}}';
             fila[6] = '<div>' +
-                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
+                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.vehiculo.show', [$vehiculo->id])}}" + ' " class="white-text" >Detalle</a></span>' +
                 '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.vehiculo.editar', [$vehiculo->id])}}"+ ' " class="white-text" >Editar</a></span>' +
                 '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.vehiculo.eliminar', [$vehiculo->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
                 '</div>';

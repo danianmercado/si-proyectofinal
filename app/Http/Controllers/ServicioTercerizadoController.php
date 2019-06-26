@@ -14,10 +14,10 @@ class ServicioTercerizadoController extends Controller
         return view('admin.gestionar_servicios_tercerizados.index',['servicios_tercerizados'=>$servicios_tercerizados]);
     }
 
-    public function show($id_servicios_tercerizados){
+    public function show($id_servicio_tercerizado){
 
-        $servicios_tercerizados =  Servicio_Tercerizado::findOrFail($id_servicios_tercerizados);
-        return View('admin.gestionar_servicio.detalle_servicio', ['servicios_tercerizados' => $servicios_tercerizados]);
+        $servicio_tercerizado =  Servicio_Tercerizado::findOrFail($id_servicio_tercerizado);
+        return View('admin.gestionar_servicios_tercerizados.detalle_servicio_tercerizado', ['servicio_tercerizado' => $servicio_tercerizado]);
     }
     public function registrar(){
         $servicios_tercerizados =  Servicio_Tercerizado::all();
@@ -47,9 +47,16 @@ class ServicioTercerizadoController extends Controller
     }
 
     public function eliminar($id_servicio_tercerizado){
-
+        $servicio_tercerizado = Servicio_Tercerizado::findOrFail($id_servicio_tercerizado);
+        return View('admin.gestionar_servicio_tercerizado.eliminar_servicio_tercerizado', ['servicio_tercerizado' => $servicio_tercerizado]);
     }
     public function delete(Request $request,$id_servicio_tercerizado){
+        if($request['eliminar'] == 'ELIMINAR'){
+            $servicio_tercerizado = Servicio_Tercerizado::findOrFail($id_servicio_tercerizado);
+            $servicio_tercerizado->delete();
+            return redirect()->route('admin.servicio_tercerizado.index');
+        }
+        return redirect()->route('admin.servicio_tercerizado.eliminar', [$id_servicio_tercerizado]);
 
     }
 }

@@ -19,8 +19,8 @@
         <label for="password">Password</label>
         <input type="password" placeholder="Enter Password">
         <input type="submit" value="Log In">
-        <a href="#">Lost your Password?</a><br>
-        <a href="#">Don't have An account?</a>
+        <a href="#">Olvidaste tu contraseña?</a><br>
+
     </form>
 </div>
 

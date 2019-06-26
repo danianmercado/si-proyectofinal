@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class OrdenTrabajo extends Model
 {
+
     protected $table = "orden_trabajo";
     protected $fillable = ['tiempo_estimado', 'id_trabajador', 'id_recepcion'];
 

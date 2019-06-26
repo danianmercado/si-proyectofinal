@@ -18,12 +18,11 @@ class CreateDetalleServicioTercerizadoTable extends Migration
             $table->unsignedBigInteger('id_st')->nullable();
             $table->string('descripcion');
             $table->date('fecha');
-            $table->unsignedBigInteger('idOt')->nullable();
+
             $table->unsignedBigInteger('id_detTrab')->nullable();
             $table->timestamps();
             $table->foreign('id_st')->references('id')->on('servicio_tercerizado');
-            $table->foreign('idOt')->references('id_ot')->on('detalle_de_trabajo');
-            $table->foreign('id_detTrab')->references('id')->on('detalle_de_trabajo');
+            $table->foreign('id_detTrab')->references('id')->on('detalle_trabajo');
         });
     }
 

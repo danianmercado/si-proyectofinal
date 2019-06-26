@@ -39,7 +39,7 @@
             fila[2] = '{{$herramienta->Marca}}';
             fila[3] = '{{$herramienta->Tipo}}';
             fila[4] = '<div>' +
-                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
+                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.herramienta.show', [$herramienta->id])}}" + ' " class="white-text" >Detalle</a></span>' +
                 '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.herramienta.editar', [$herramienta->id])}}" + ' " class="white-text" >Editar</a></span>' +
                 '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.herramienta.eliminar', [$herramienta->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
                 '</div>';

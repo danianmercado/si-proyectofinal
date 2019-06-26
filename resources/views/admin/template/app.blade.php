@@ -96,8 +96,7 @@
                             @can('orden_trabajo.index')
                             <li><a href="{{route('admin.orden_trabajo.index')}}" class="waves-effect">Gestionar Orden de trabajo<i class="material-icons">list</i></a></li>
                             @endcan
-
-                            <li><a href="{{route('admin.servicio_tercerizado.index')}}" class="waves-effect">Gestionar detalles de trabajo<i class="material-icons">list</i></a></li>
+                            <li><a href="{{route('admin.detalle_trabajo.index')}}" class="waves-effect">Gestionar detalles de trabajo<i class="material-icons">list</i></a></li>
                             <li><a href="{{route('admin.servicio_tercerizado.index')}}" class="waves-effect">Gestionar nota de reparacion<i class="material-icons">list</i></a></li>
                         </ul>
                     </div>

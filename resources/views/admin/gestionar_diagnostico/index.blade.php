@@ -36,7 +36,7 @@
             fila[1] = '{{$diagnostico->descripcion}}';
             fila[2] = '{{$diagnostico->recepcion->id}}';
             fila[3] = '<div>' +
-                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
+                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.diagnostico.show', [$diagnostico->id])}}" + ' " class="white-text" >Detalle</a></span>' +
                 '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.diagnostico.editar', [$diagnostico->id])}}"+ ' " class="white-text" >Editar</a></span>' +
                 '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.diagnostico.eliminar', [$diagnostico->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
                 '</div>';

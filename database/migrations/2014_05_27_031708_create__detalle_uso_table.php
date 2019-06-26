@@ -16,12 +16,11 @@ class CreateDetalleUsoTable extends Migration
         Schema::create('_detalle_uso', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('cantidad');
-            $table->unsignedBigInteger('idOt')->nullable();
             $table->unsignedBigInteger('id_det')->nullable();
             $table->unsignedBigInteger('id_producto')->nullable();
             $table->timestamps();
-            $table->foreign('idOt')->references('id_ot')->on('detalle_de_trabajo');
-            $table->foreign('id_det')->references('id')->on('detalle_de_trabajo');
+
+            $table->foreign('id_det')->references('id')->on('detalle_trabajo');
             $table->foreign('id_producto')->references('id')->on('producto');
 
         });

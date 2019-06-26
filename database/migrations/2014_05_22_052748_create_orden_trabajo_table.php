@@ -16,6 +16,7 @@ class CreateOrdenTrabajoTable extends Migration
         Schema::create('orden_trabajo', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('tiempo_estimado');
+
             $table->unsignedBigInteger('id_recepcion')->nullable();
             $table->unsignedBigInteger('id_trabajador')->nullable();
             $table->timestamps();

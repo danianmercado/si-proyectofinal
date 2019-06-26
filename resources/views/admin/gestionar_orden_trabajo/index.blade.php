@@ -33,19 +33,19 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var datos = [];
-            @foreach($ordenes as $orden)
-                var fila = [];
-                fila[0] = '{{$orden->id}}';
-                fila[1] = '{{$orden->tiempo_estimado . ' días'}}';
-                fila[2] = '{{$orden->trabajador->personal->nombre . ' ' . $orden->trabajador->personal->paterno . ' ' . $orden->trabajador->personal->materno}}';
-                fila[3] = '{{$orden->recepcion->vehiculo->placa . ' ' . $orden->recepcion->vehiculo->modelo . ' ' . $orden->recepcion->vehiculo->anio}}';
-                fila[4] = '<div>' +
-                    '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.orden_trabajo.show', [$orden->id])}}" + ' " class="white-text" >Detalle</a></span>' +
-                    '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.orden_trabajo.editar', [$orden->id])}}" + ' " class="white-text" >Editar</a></span>' +
-                    '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.orden_trabajo.eliminar', [$orden->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
-                    '<span class="new badge positive-secondary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Añadir detalle de trabajo</a></span>' +
-            '</div>';
-                datos.push(fila);
+                @foreach($ordenes as $orden)
+            var fila = [];
+            fila[0] = '{{$orden->id}}';
+            fila[1] = '{{$orden->tiempo_estimado . ' días'}}';
+            fila[2] = '{{$orden->trabajador->personal->nombre . ' ' . $orden->trabajador->personal->paterno . ' ' . $orden->trabajador->personal->materno}}';
+            fila[3] = '{{$orden->recepcion->vehiculo->placa . ' ' . $orden->recepcion->vehiculo->modelo . ' ' . $orden->recepcion->vehiculo->anio}}';
+            fila[4] = '<div>' +
+                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.orden_trabajo.show', [$orden->id])}}" + ' " class="white-text" >Detalle</a></span>' +
+                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.orden_trabajo.editar', [$orden->id])}}" + ' " class="white-text" >Editar</a></span>' +
+                '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.orden_trabajo.eliminar', [$orden->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
+                '<span class="new badge positive-secondary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Añadir detalle de trabajo</a></span>' +
+                '</div>';
+            datos.push(fila);
             @endforeach
             addDatosGeneral(datos);
         });

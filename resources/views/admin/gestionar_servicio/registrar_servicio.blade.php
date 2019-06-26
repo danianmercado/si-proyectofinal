@@ -13,10 +13,6 @@
                                 <label for="Tipo_de_Servicio">Tipo de servicio:</label>
                                 {!! $errors->first('Tipo_de_Servicio','<span class="help-block red-text">Esta información es obligatoria.') !!}
                             </div>
-
-
-
-
                                     <label >Estado del servicio:</label>
                                     <select id="Estado" class="browser-default" name="Estado" class="col s12 input-field">
                                         <option value="" disabled selected>selecione</option>

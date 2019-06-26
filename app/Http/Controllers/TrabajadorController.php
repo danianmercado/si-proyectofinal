@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Caffeinated\Shinobi\Models\Permission;
 use Caffeinated\Shinobi\Models\Role;
+use Illuminate\Support\Facades\DB;
 
 class TrabajadorController extends Controller
 {
@@ -43,14 +44,6 @@ class TrabajadorController extends Controller
         $user->id_personal = $persona->id;
         $user->save();
 
-
-        foreach($request['id_permiso'] as $id)
-        {
-            DB::table('permission_user')->insert([
-                'permission_id' => $id,
-                'user_id' => $user->id,
-            ]);
-        }
 
 
         return redirect()->route('admin.trabajador.index');

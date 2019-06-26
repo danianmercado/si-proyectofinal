@@ -279,67 +279,7 @@ class UserTableSeeder extends Seeder
             'description' => 'Elimina un nuevo servicio tercerizado'
         ]);
 
-        //////////////// orden de trabajo //////////////////////////////////////////////
-        Permission::create([
-            'name'        => 'Navegador de ordenes de trabajo',
-            'slug'        => 'orden_trabajo.index',
-            'description' => 'Lista y navega todos los ordenes de trabajo del sistema'
-        ]);
 
-        Permission::create([
-            'name'        => 'Ver detalle del orden de trabajo',
-            'slug'        => 'orden_trabajo.show',
-            'description' => 'Muestra los detalle de una orden de trabajo'
-        ]);
-
-        Permission::create([
-            'name'        => 'Crear una nueva orden de trabajo',
-            'slug'        => 'orden_trabajo.create',
-            'description' => 'Crea una nueva orden de trabajo'
-        ]);
-
-        Permission::create([
-            'name'        => 'Editar una orden de trabajo ',
-            'slug'        => 'orden_trabajo.edit',
-            'description' => 'Editar una orden de trabajo '
-        ]);
-
-        Permission::create([
-            'name'        => 'Elimina una orden de trabajo ',
-            'slug'        => 'orden_trabajo.delete',
-            'description' => 'Elimina una orden de trabajo '
-        ]);
-
-        //////////////// detalle de trabajo //////////////////////////////////////////////
-        Permission::create([
-            'name'        => 'Navegador de detalles de trabajo',
-            'slug'        => 'detalle_trabajo.index',
-            'description' => 'Lista y navega todos los detalles de trabajo del sistema'
-        ]);
-
-        Permission::create([
-            'name'        => 'Ver detalle del detalle de trabajo',
-            'slug'        => 'detalle_trabajo.show',
-            'description' => 'Muestra los detalle de un detalle de trabajo'
-        ]);
-
-        Permission::create([
-            'name'        => 'Crear un nueva detalle de trabajo',
-            'slug'        => 'detalle_trabajo.create',
-            'description' => 'Crea un nueva detalle de trabajo'
-        ]);
-
-        Permission::create([
-            'name'        => 'Editar un detalle de trabajo ',
-            'slug'        => 'detalle_trabajo.edit',
-            'description' => 'Editar un detalle de trabajo '
-        ]);
-
-        Permission::create([
-            'name'        => 'Elimina un detalle de trabajo ',
-            'slug'        => 'detalle_trabajo.delete',
-            'description' => 'Elimina un detalle de trabajo '
-        ]);
 
         //////////////// almacenes //////////////////////////////////////////////
         Permission::create([
@@ -433,6 +373,70 @@ class UserTableSeeder extends Seeder
             'slug'        => 'repuesto.delete',
             'description' => 'Elimina un nuevo repuesto'
         ]);
+
+        //////////////// DETALLE DE TRABAJO //////////////////////////////////////////////
+        Permission::create([
+            'name'        => 'Navegador de detalle de trabajo',
+            'slug'        => 'detalle_trabajo.index',
+            'description' => 'Lista y navega todos los detalles de trabajo'
+        ]);
+
+        Permission::create([
+            'name'        => 'Ver detalle del detalle de trabajo',
+            'slug'        => 'detalle_trabajo.show',
+            'description' => 'Muestra los detalle de detalle de trabajo'
+        ]);
+
+        Permission::create([
+            'name'        => 'Crear un detalle de trabajo nuevo',
+            'slug'        => 'detalle_trabajo.create',
+            'description' => 'Crea un nuevo detalle de trabajo'
+        ]);
+
+        Permission::create([
+            'name'        => 'Editar un detalle de trabajo nuevo',
+            'slug'        => 'detalle_trabajo.edit',
+            'description' => 'Editar un detalle de trabajo nuevo'
+        ]);
+
+        Permission::create([
+            'name'        => 'Elimina un detalle de trabajo nuevo',
+            'slug'        => 'detalle_trabajo.delete',
+            'description' => 'Elimina un nuevo detalle de repuesto'
+        ]);
+
+        //////////////// ORDEN DE TRABAJO //////////////////////////////////////////////
+        Permission::create([
+            'name'        => 'Navegador de orden de trabajo',
+            'slug'        => 'orden_trabajo.index',
+            'description' => 'Lista y navega todos las ordenes de trabajo'
+        ]);
+
+        Permission::create([
+            'name'        => 'Ver detalle de la orden de trabajo',
+            'slug'        => 'orden_trabajo.show',
+            'description' => 'Muestra los detalle de la orden de trabajo'
+        ]);
+
+        Permission::create([
+            'name'        => 'Crear un orden de trabajo nuevo',
+            'slug'        => 'orden_trabajo.create',
+            'description' => 'Crea un nuevo orden de trabajo'
+        ]);
+
+        Permission::create([
+            'name'        => 'Editar una orden de trabajo nuevo',
+            'slug'        => 'orden_trabajo.edit',
+            'description' => 'Editar una orden de trabajo nuevo'
+        ]);
+
+        Permission::create([
+            'name'        => 'Elimina una orden de trabajo nuevo',
+            'slug'        => 'orden_trabajo.delete',
+            'description' => 'Elimina una orden de trabajo'
+        ]);
+
+
 
         Role::create([
           'name'    => 'Admin',

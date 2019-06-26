@@ -20,7 +20,8 @@ class VehiculoController extends Controller
 
     public function show($id_vehiculo){
       Bitacora::tupla_bitacora('Mostrar el vehiculo :'.$id_vehiculo);//bitacora
-
+        $vehiculo = Vehiculo::findOrFail($id_vehiculo);
+        return View('admin.gestionar_vehiculo.detalle_vehiculo', ['vehiculo' => $vehiculo]);
 
     }
     public function registrar(){

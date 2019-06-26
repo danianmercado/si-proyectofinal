@@ -13,15 +13,14 @@ class CreateDetalleDeTrabajoTable extends Migration
      */
     public function up()
     {
-        Schema::create('detalle_de_trabajo', function (Blueprint $table) {
+        Schema::create('detalle_trabajo', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('id_ot')->nullable();
             $table->string('descripcion');
             $table->integer('precio');
-            $table->unsignedBigInteger('id_servicio')->nullable();
             $table->timestamps();
             $table->foreign('id_ot')->references('id')->on('orden_trabajo');
-            $table->foreign('id_servicio')->references('id')->on('servicio');
+
         });
     }
 

@@ -19,6 +19,8 @@ class DiagnosticoController extends Controller
 
     public function show($id_diagnostico){
       Bitacora::tupla_bitacora('Mostrar el diagnostico :'.$id_diagnostico);//bitacora
+        $diagnostico = Diagnostico::findOrFail($id_diagnostico);
+        return View('admin.gestionar_diagnostico.detalle_diagnostico', ['diagnostico' => $diagnostico]);
 
     }
     public function registrar(){
