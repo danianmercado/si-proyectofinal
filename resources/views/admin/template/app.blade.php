@@ -112,9 +112,9 @@
                             @can('almacen.index')
                             <li><a href="{{route('admin.almacen.index')}}" class="waves-effect">Gestionar almacen<i class="material-icons">list</i></a></li>
                             @endcan
-                            @can('insumo.index')
+
                             <li><a href="{{route('admin.insumo.index')}}" class="waves-effect">Gestionar Insumo<i class="material-icons">list</i></a></li>
-                            @endcan
+
                             @can('herramienta.index')
                             <li><a href="{{route('admin.herramienta.index')}}" class="waves-effect">Gestionar Herramienta<i class="material-icons">list</i></a></li>
                             @endcan

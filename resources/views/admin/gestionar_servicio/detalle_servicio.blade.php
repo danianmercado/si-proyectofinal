@@ -31,7 +31,7 @@
 </div>
 <div class="row">
     <div class="col s12">
-        <a href="{{route('admin.detalle_servicio.registrar')}}" class="waves-effect waves-light btn positive-primary-color"><i class="material-icons right">add_box</i>Registrar Detalle Servicio</a>
+        <a href="{{route('admin.detalle_servicio.registrar',[$servicio->id])}}" class="waves-effect waves-light btn positive-primary-color"><i class="material-icons right">add_box</i>Registrar Detalle Servicio</a>
     </div>
 </div>
 

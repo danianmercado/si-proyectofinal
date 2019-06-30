@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col s12 m10 offset-m1 l6 offset-l3">
 
-            <form action="{{route('admin.detalle_servicio.guardar', [$servicio->id])}}" method="POST">
+            <form action="{{route('admin.detalle_servicio.modificar')}}" method="POST">
                 @csrf
 
                 <div class="card z-depth-4">
