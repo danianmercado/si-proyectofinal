@@ -16,6 +16,7 @@
                         <th>Precio</th>
                         <th>Descripcion</th>
                         <th>Orden de Trabajo</th>
+
                         <th>Acciones</th>
                     </tr>
 
@@ -31,9 +32,10 @@
                 @foreach($detalles as $dl)
             var fila = [];
             fila[0] = '{{$dl->id}}';
-            fila[1] = '{{$dl->precio}}';
+            fila[1] = '{{$dl->precio.' Bs'}}';
             fila[2] = '{{$dl->descripcion}}';
             fila[3] = '{{$dl->id_ot}}';
+
             fila[4] = '<div>' +
                 '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.detalle_trabajo.show', [$dl->id])}}" + ' " class="white-text" >Detalle</a></span>' +
                 '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.detalle_trabajo.editar', [$dl->id])}}"+ ' " class="white-text" >Editar</a></span>' +

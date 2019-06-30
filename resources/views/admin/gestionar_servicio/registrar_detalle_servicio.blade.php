@@ -3,17 +3,18 @@
     <div class="row">
         <div class="col s12 m10 offset-m1 l6 offset-l3">
 
-            <form action="{{route('admin.servicio.guardar')}}" method="POST">
+            <form action="{{route('admin.detalle_servicio.guardar')}}" method="POST">
                 @csrf
 
                 <div class="card z-depth-4">
                     <div class="card-content">
                         <span class="card-title center-align">Registrar Detalle de Servicio</span>
                         <div class="col s12 input-field">
-                            <textarea id="descripcion" class="materialize-textarea" data-length="120"></textarea>
-                            <label for="descripcion">Descripcion </label>
+                            <textarea  id="descripcion" name="descripcion" type="text" class="materialize-textarea"></textarea>
+                            <label for="descripcion">Descripcion del diagnostico:</label>
                             {!! $errors->first('descripcion','<span class="help-block red-text">Esta información es obligatoria.') !!}
                         </div>
+
 
                         <div class="row">
                             <div class="col s12 right-align">

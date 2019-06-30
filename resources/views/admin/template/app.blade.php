@@ -96,8 +96,12 @@
                             @can('orden_trabajo.index')
                             <li><a href="{{route('admin.orden_trabajo.index')}}" class="waves-effect">Gestionar Orden de trabajo<i class="material-icons">list</i></a></li>
                             @endcan
+                            @can('detalle_trabajo.index')
                             <li><a href="{{route('admin.detalle_trabajo.index')}}" class="waves-effect">Gestionar detalles de trabajo<i class="material-icons">list</i></a></li>
-                            <li><a href="{{route('admin.servicio_tercerizado.index')}}" class="waves-effect">Gestionar nota de reparacion<i class="material-icons">list</i></a></li>
+                            @endcan
+                            @can('nota_reparacion.index')
+                            <li><a href="{{route('admin.nota_reparacion.index')}}" class="waves-effect">Gestionar nota de reparacion<i class="material-icons">list</i></a></li>
+                            @endcan
                         </ul>
                     </div>
                 </li>
@@ -105,10 +109,18 @@
                 <li class="bold waves-effect"><a class="collapsible-header">almacen<i class="material-icons chevron">chevron_left</i></a>
                     <div class="collapsible-body">
                         <ul>
+                            @can('almacen.index')
                             <li><a href="{{route('admin.almacen.index')}}" class="waves-effect">Gestionar almacen<i class="material-icons">list</i></a></li>
+                            @endcan
+                            @can('insumo.index')
                             <li><a href="{{route('admin.insumo.index')}}" class="waves-effect">Gestionar Insumo<i class="material-icons">list</i></a></li>
+                            @endcan
+                            @can('herramienta.index')
                             <li><a href="{{route('admin.herramienta.index')}}" class="waves-effect">Gestionar Herramienta<i class="material-icons">list</i></a></li>
+                            @endcan
+                            @can('repuesto.index')
                             <li><a href="{{route('admin.repuesto.index')}}" class="waves-effect">Gestionar Repuesto<i class="material-icons">list</i></a></li>
+                            @endcan
                             <ul class="collapsible collapsible-accordion">
                                 <li class="bold waves-effect"><a class="collapsible-header">Stocks<i class="material-icons chevron">chevron_left</i></a>
                                     <div class="collapsible-body">
@@ -125,8 +137,8 @@
                         </ul>
                     </div>
                 </li>
-
                 </div>
+
                 </li>
             </ul>
         </li>
@@ -138,7 +150,7 @@
         <ul id="nav-mobile" class="right">
             <form action="{{route('logout')}}" method="POST">
                 @csrf
-                <li class="hide-on-med-and-down"><a href="#" class="waves-effect dark-primary-color"><i class="material-icons">home</i></a></li>
+                <li class="hide-on-med-and-down"><a href="{{route('home')}}" class="waves-effect dark-primary-color"><i class="material-icons">home</i></a></li>
                 <li><button type="submit" class="waves-effect dark-primary-color"><i class="material-icons">close</i></button></li>
             </form>
         </ul>

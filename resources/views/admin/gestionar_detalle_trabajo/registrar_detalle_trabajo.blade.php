@@ -18,6 +18,15 @@
                             </select>
 
                         </div>
+                        <div class="col s12 input-field">
+                            <select name="id_servicio">
+                                <option value="" disabled selected>Seleccione un Servicio:</option>
+                                @foreach($servicios as $servicio)
+                                    <option value="{{$servicio->id}}">{{$servicio->Tipo_de_Servicio}}</option>
+                                @endforeach
+                            </select>
+
+                        </div>
 
                         <div class="row">
                             <div class="col s12 input-field">

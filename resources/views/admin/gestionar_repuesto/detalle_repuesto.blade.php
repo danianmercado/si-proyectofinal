@@ -6,45 +6,49 @@
                 <div class="card-content">
 
                     <div class="row">
+
                         <div class="col s12 m4">
-                            <p class="light-secondary-color title-text-style ">ID:</p>
+                            <p class="light-secondary-color title-text-style ">Costo:</p>
                         </div>
                         <div class="col s8 offset-s2 m8">
-                            <p class="accent-color-text">{{$administrativo->id}}</p>
+                            <p class="accent-color-text">{{$repuesto->Costo.' Bs'}}</p>
                         </div>
 
                         <div class="col s12 m4">
-                            <p class="light-secondary-color title-text-style ">Nombre Completo:</p>
+                            <p class="light-secondary-color title-text-style ">Descripcion:</p>
                         </div>
                         <div class="col s8 offset-s2 m8">
-                            <p class="secondary-text-color">{{$administrativo->personal->nombre . ' ' . $administrativo->personal->paterno . ' ' . $administrativo->personal->materno}}</p>
+                            <p class="accent-color-text">{{$repuesto->descripcion}}</p>
                         </div>
 
                         <div class="col s12 m4">
-                            <p class="light-secondary-color title-text-style ">Telefono:</p>
+                            <p class="light-secondary-color title-text-style ">Nombre:</p>
                         </div>
                         <div class="col s8 offset-s2 m8">
-                            <p class="accent-color-text">{{$administrativo->personal->telefono}}</p>
-                        </div>
-                        <div class="col s12 m4">
-                            <p class="light-secondary-color title-text-style ">Direccion:</p>
-                        </div>
-                        <div class="col s8 offset-s2 m8">
-                            <p class="accent-color-text">{{$administrativo->personal->direccion}}</p>
+                            <p class="accent-color-text">{{$repuesto->Nombre}}</p>
                         </div>
 
                         <div class="col s12 m4">
-                            <p class="light-secondary-color title-text-style ">Area:</p>
+                            <p class="light-secondary-color title-text-style ">Marca:</p>
                         </div>
                         <div class="col s8 offset-s2 m8">
-                            <p class="accent-color-text">{{$administrativo->area}}</p>
+                            <p class="accent-color-text">{{$repuesto->marca}}</p>
                         </div>
+
+                        <div class="col s12 m4">
+                            <p class="light-secondary-color title-text-style ">Procedencia:</p>
+                        </div>
+                        <div class="col s8 offset-s2 m8">
+                            <p class="accent-color-text">{{$repuesto->procedencia}}</p>
+                        </div>
+
+
 
                     </div>
 
                 </div>
-                <div class="card-action cancel-primary-color right-align ">
-                    <a href="{{route('admin.trabajador.index')}}" class="btn negative-primary-color" type="submit">aceptar</a>
+                <div class="card-action cancel-primary-color">
+                    <a href="{{route('admin.herramienta.index')}}" class="btn negative-primary-color" type="submit">aceptar</a>
 
                 </div>
             </div>

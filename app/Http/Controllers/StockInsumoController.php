@@ -16,10 +16,11 @@ class StockInsumoController extends Controller
             ->join('producto', 'stock__p.id_producto', '=', 'producto.id')
             ->join('almacen', 'stock__p.id_almacen', '=', 'almacen.id')
             ->where('producto.Tipo_producto', '=', 'I')
-            ->select('producto.nombre as nombre', 'producto.descripcion as descripcion',
+            ->select('stock__p.id as id', 'producto.nombre as nombre', 'producto.descripcion as descripcion',
                 'almacen.ubicacion', DB::raw('sum(cantidad) as cantidad'))
-            ->groupBy('producto.nombre', 'producto.descripcion', 'almacen.ubicacion')
+            ->groupBy('stock__p.id', 'producto.nombre', 'producto.descripcion', 'almacen.ubicacion')
             ->get();
+
         return view('admin.gestionar_stock_insumo.index',['stock_insumos'=>$stock_insumos]);
     }
 

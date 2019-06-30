@@ -16,10 +16,12 @@ class CreateDetalleDeTrabajoTable extends Migration
         Schema::create('detalle_trabajo', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('id_ot')->nullable();
+            $table->unsignedBigInteger('id_servicio')->nullable();
             $table->string('descripcion');
             $table->integer('precio');
             $table->timestamps();
             $table->foreign('id_ot')->references('id')->on('orden_trabajo');
+            $table->foreign('id_servicio')->references('id')->on('servicio');
 
         });
     }

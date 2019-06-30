@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DetalleServicioTercerizado;
 use App\Servicio_Tercerizado;
 use App\Http\Requests\ServicioTercerizadoStoreRequest;
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class ServicioTercerizadoController extends Controller
     public function show($id_servicio_tercerizado){
 
         $servicio_tercerizado =  Servicio_Tercerizado::findOrFail($id_servicio_tercerizado);
-        return View('admin.gestionar_servicios_tercerizados.detalle_servicio_tercerizado', ['servicio_tercerizado' => $servicio_tercerizado]);
+        $detalle_servicio_tercerizado = DetalleServicioTercerizado::all();
+        return View('admin.gestionar_servicios_tercerizados.detalle_servicio_tercerizado', ['servicio_tercerizado' => $servicio_tercerizado,'detalle_servicio_tercerizado'=>$detalle_servicio_tercerizado]);
     }
     public function registrar(){
         $servicios_tercerizados =  Servicio_Tercerizado::all();

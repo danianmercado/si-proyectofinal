@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DetalleServicio;
 use App\Http\Requests\ServicioStoreRequest;
 use App\Servicio;
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class ServicioController extends Controller
 
     public function show($id_servicio){
         $servicio = Servicio::findOrFail($id_servicio);
-        return View('admin.gestionar_servicio.detalle_servicio', ['servicio' => $servicio]);
+        $detalle_servicios = DetalleServicio::all();
+        return View('admin.gestionar_servicio.detalle_servicio', ['servicio' => $servicio,'detalle_servicios'=>$detalle_servicios]);
     }
     public function registrar(){
         $servicios = Servicio::all();

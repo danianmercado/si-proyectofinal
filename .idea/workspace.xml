@@ -2,31 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="579f3c57-1b08-43ed-a707-93c17d571d70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/NotaReparacionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/NotaReparacionStoreRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Nota_reparacion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/editar_administrativo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/eliminar_administrativo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_stock_insumo/editar_stock_insumo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_stock_insumo/eliminar_stock_insumo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_stock_insumo/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_stock_insumo/registrar_stock_insumo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_stock_repuesto/editar_stock_repuesto.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_stock_repuesto/eliminar_stock_repuesto.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_stock_repuesto/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_stock_repuesto/registrar_stock_repuesto.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/editar_trabajador.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DetalleServicio.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DetalleServicioTercerizado.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DetalleServicioController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DetalleServicioTercerizadoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/DetalleServicioStoreRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/DetalleServicioTercerizadoStoreRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/detalle_detalle_trabajo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/eliminar_detalle_trabajo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_insumo/detalle_insumo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_nota_reparacion/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_nota_reparacion/registrar_nota_reparacion.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_orden_trabajo/detalle_orden_trabajo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_orden_trabajo/eliminar_orden_trabajo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_repuesto/detalle_repuesto.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/registrar_detalle_servicio_tercerizado.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdministrativoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdministrativoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockHerramientaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockHerramientaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/DetalleTrabajo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DetalleTrabajo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DetalleTrabajoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DetalleTrabajoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NotaReparacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NotaReparacionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdenTrabajoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrdenTrabajoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServicioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServicioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServicioTercerizadoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServicioTercerizadoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockInsumoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockInsumoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TrabajadorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TrabajadorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/StockHerramientaStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StockHerramientaStoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/TrabajadorStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/TrabajadorStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nota_reparacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nota_reparacion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Personal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Personal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Stock_Herramienta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stock_Herramienta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_orden_trabajo/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_orden_trabajo/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_stock_herramienta/registrar_stock_herramienta.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_stock_herramienta/registrar_stock_herramienta.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Recepcion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Recepcion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_05_27_001250_create_detalle_de_trabajo_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_05_27_001250_create_detalle_de_trabajo_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_05_27_001257_create_detalle_servicio_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_05_27_001257_create_detalle_servicio_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/detalle_administrativo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/detalle_administrativo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/editar_administrativo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/editar_administrativo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/editar_detalle_trabajo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/editar_detalle_trabajo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/registrar_detalle_trabajo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/registrar_detalle_trabajo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_insumo/editar_insumo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_insumo/editar_insumo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_insumo/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_insumo/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_recepcion/detalle_recepcion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_recepcion/detalle_recepcion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_repuesto/editar_repuesto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_repuesto/editar_repuesto.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_repuesto/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_repuesto/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_repuesto/registrar_repuesto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_repuesto/registrar_repuesto.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_servicio/detalle_servicio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_servicio/detalle_servicio.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_servicio/registrar_detalle_servicio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_servicio/registrar_detalle_servicio.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/detalle_servicio_tercerizado.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/detalle_servicio_tercerizado.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/template/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/template/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -57,8 +77,10 @@
     <session id="-1309808317">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="36" />
+          <entry key="project.closed" value="40" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.100" value="1" />
+          <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="2" />
@@ -71,9 +93,9 @@
           <entry key="project.open.time.51" value="3" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.54" value="1" />
-          <entry key="project.open.time.56" value="1" />
+          <entry key="project.open.time.56" value="2" />
           <entry key="project.open.time.57" value="2" />
-          <entry key="project.open.time.58" value="3" />
+          <entry key="project.open.time.58" value="4" />
           <entry key="project.open.time.60" value="1" />
           <entry key="project.open.time.61" value="2" />
           <entry key="project.open.time.63" value="1" />
@@ -82,31 +104,31 @@
           <entry key="project.open.time.69" value="1" />
           <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.80" value="1" />
-          <entry key="project.opened" value="37" />
+          <entry key="project.opened" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="16" />
-          <entry key="env" value="6" />
+          <entry key="env" value="7" />
           <entry key="html" value="3" />
           <entry key="jpg" value="2" />
           <entry key="js" value="7" />
           <entry key="json" value="1" />
-          <entry key="php" value="1309" />
+          <entry key="php" value="1519" />
           <entry key="scss" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key=".env file" value="6" />
-          <entry key="Blade" value="505" />
+          <entry key=".env file" value="7" />
+          <entry key="Blade" value="608" />
           <entry key="CSS" value="16" />
           <entry key="HTML" value="3" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="7" />
-          <entry key="PHP" value="804" />
+          <entry key="PHP" value="911" />
           <entry key="SCSS" value="2" />
         </counts>
       </usages-collector>
@@ -116,109 +138,94 @@
           <entry key="dummy" value="86" />
           <entry key="env" value="23" />
           <entry key="js" value="19" />
-          <entry key="php" value="31681" />
-          <entry key="txt" value="4673" />
+          <entry key="php" value="35459" />
+          <entry key="txt" value="5073" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="23" />
-          <entry key="Blade" value="11285" />
+          <entry key="Blade" value="12648" />
           <entry key="CSS" value="476" />
           <entry key="JavaScript" value="19" />
-          <entry key="PHP" value="20396" />
-          <entry key="PLAIN_TEXT" value="4759" />
+          <entry key="PHP" value="22811" />
+          <entry key="PLAIN_TEXT" value="5159" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/editar_administrativo.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicio/registrar_detalle_servicio.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1610">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="425">
+              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/editar_trabajador.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/registrar_detalle_servicio_tercerizado.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+            <state relative-caret-position="629">
+              <caret line="37" column="90" lean-forward="true" selection-start-line="37" selection-start-column="90" selection-end-line="37" selection-end-column="90" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/registrar_trabajador.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicio/detalle_servicio.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="68" column="69" lean-forward="true" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
+            <state relative-caret-position="551">
+              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/detalle_trabajador.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="36" column="55" lean-forward="true" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_vehiculo/registrar_vehiculo.blade.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StockInsumoController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-              <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_cliente/registrar_cliente.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_stock_insumo/index.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/detalle_servicio_tercerizado.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_stock_insumo/registrar_stock_insumo.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/template/app.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="36" column="50" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="50" />
+            <state relative-caret-position="446">
+              <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdministrativoController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="910">
-              <caret line="63" column="65" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="65" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HerramientaController.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/registrar_administrativo.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_almacen/registrar_almacen.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_diagnostico/registrar_diagnostico.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-555">
-              <caret line="14" column="77" lean-forward="true" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="77" />
+            <state relative-caret-position="272">
+              <caret line="16" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -232,31 +239,31 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="php artisan migrate:refresh --seed" />
-      <command text="php artisan serve " />
-      <command text="php artisan server" />
-      <command text="php artisan serve" />
-      <command text="php artisan  server" />
-      <command text="php artisan  serve" />
-      <command text="php artisan make:controller DetalleTrabajoController" />
-      <command text="php artisan make:Request DetalleTrabajoStoreRequest" />
-      <command text="php artisan make:model DetalleTrabajo" />
-      <command text="php artisan migrate:refresh --seed" />
-      <command text="php artisan migrate:rollback" />
-      <command text="php artisan migrate:refresh --seed" />
-      <command text="php artisan migrate:rollback" />
-      <command text="php artisan migrate --seed" />
-      <command text="php artisan migrate:rollback" />
-      <command text="php artisan migrate --seed" />
-      <command text="php artisan serve" />
-      <command text="php artisan make:request OrdenTrabajoStoreRequest" />
-      <command text="php artisan serve" />
       <command text="php artisan serve " />
       <command text="php artisan migrate --seed" />
       <command text="php artisan serve" />
       <command text="php artisan make:model Nota_reparacion" />
       <command text="php artisan make:controller  NotaReparacionController" />
       <command text="php artisan make:request NotaReparacionStoreRequest" />
+      <command text="php artisan serve " />
+      <command text="php artisan serve --host:192.168.0.37" />
+      <command text="php artisan serve --host=192.168.0.1" />
+      <command text="php artisan serve --host=192.168.0.37" />
+      <command text="php artisan serve" />
+      <command text="php artisan make:controller DetalleServicioTercerizadoController" />
+      <command text="php artisan make:model DetalleServicioTercerizado" />
+      <command text="php artisan make:request  DetalleServicioTercerizadoStoreRequest" />
+      <command text="php artisan make:request  DetalleServicioStoreRequest" />
+      <command text="php artisan make:model DetalleServicio" />
+      <command text="php artisan make:controller DetalleServicioController" />
+      <command text="php artisan serve" />
+      <command text="php artisan serve  --host=172.20.10.2" />
+      <command text="php artisan serve --host= 192.168.0.18" />
+      <command text="php artisan serve --host=192.168.0.18" />
+      <command text="php artisan serve " />
+      <command text="php artisan migrate --seed" />
+      <command text="php artisan serve" />
+      <command text="php artisan serve " />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -268,57 +275,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_diagnostico/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/DiagnosticoController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_diagnostico/detalle_diagnostico.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_herramienta/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_herramienta/detalle_herramienta.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_vehiculo/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_vehiculo/detalle_vehiculo.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/detalle_servicios_tercerizados.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/detalle_servicio_tercerizado.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ServicioTercerizadoController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/detalle_administrativo.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_servicio/registrar_detalle_servicio.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_05_27_001250_create_detalle_de_trabajo_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_05_27_001257_create_detalle_servicio_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_05_27_031708_create__detalle_uso_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_05_27_032845_create_detalle_servicio_tercerizado_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/VehiculoController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/DetalleTrabajoStoreRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_orden_trabajo/registrar_orden.blade.php" />
-        <option value="$PROJECT_DIR$/app/DetalleTrabajo.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/editar_detalle_trabajo.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/DetalleTrabajoController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_orden_trabajo/editar_orden_trabajo.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_orden_trabajo/registrar_orden_trabajo.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/OrdenTrabajoStoreRequest.php" />
-        <option value="$PROJECT_DIR$/app/OrdenTrabajo.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_05_22_052748_create_orden_trabajo_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/OrdenTrabajoController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/registrar_detalle_trabajo.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_stock_herramienta/registrar_stock_herramienta.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_stock_repuesto/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_stock_repuesto/registrar_stock_repuesto.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_orden_trabajo/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/NotaReparacionStoreRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/TrabajadorStoreRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_stock_insumo/registrar_stock_insumo.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/StockInsumoController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_stock_insumo/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TrabajadorController.php" />
-        <option value="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/Personal.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdministrativoController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/eliminar_administrativo.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/editar_administrativo.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/registrar_trabajador.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/editar_trabajador.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/editar_administrativo.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/StockInsumoController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/eliminar_detalle_trabajo.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/detalle_administrativo.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdministrativoController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_insumo/editar_insumo.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_insumo/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_orden_trabajo/eliminar_orden_trabajo.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_orden_trabajo/detalle_orden_trabajo.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_orden_trabajo/editar_orden_trabajo.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/OrdenTrabajoController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_repuesto/editar_repuesto.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_repuesto/registrar_repuesto.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_repuesto/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_insumo/detalle_insumo.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_repuesto/detalle_repuesto.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_recepcion/detalle_recepcion.blade.php" />
+        <option value="$PROJECT_DIR$/app/Nota_reparacion.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_nota_reparacion/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_nota_reparacion/registrar_nota_reparacion.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/DetalleServicioTercerizadoStoreRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/NotaReparacionController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/template/app.blade.php" />
+        <option value="$PROJECT_DIR$/app/DetalleServicioTercerizado.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_05_27_001257_create_detalle_servicio_table.php" />
+        <option value="$PROJECT_DIR$/app/DetalleServicio.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_05_27_001250_create_detalle_de_trabajo_table.php" />
+        <option value="$PROJECT_DIR$/app/DetalleTrabajo.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/editar_detalle_trabajo.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TrabajadorController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/registrar_detalle_trabajo.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DetalleTrabajoController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/detalle_detalle_trabajo.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DiagnosticoController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DetalleServicioTercerizadoController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_servicio/detalle_servicio.blade.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/Recepcion.php" />
+        <option value="$PROJECT_DIR$/app/Personal.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ReporteController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ServicioController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ServicioTercerizadoController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DetalleServicioController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_servicio/registrar_detalle_servicio.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/registrar_detalle_servicio_tercerizado.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/detalle_servicio_tercerizado.blade.php" />
       </list>
     </option>
   </component>
@@ -418,8 +425,8 @@
       <path value="$PROJECT_DIR$/vendor/caffeinated/shinobi" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -429,7 +436,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -458,6 +464,17 @@
             <path>
               <item name="Proyecto" type="b2602c69:ProjectViewProjectNode" />
               <item name="Proyecto" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -479,7 +496,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="gestionar_administrativo" type="462c0819:PsiDirectoryNode" />
+              <item name="gestionar_almacen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Proyecto" type="b2602c69:ProjectViewProjectNode" />
@@ -487,7 +504,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="gestionar_stock_insumo" type="462c0819:PsiDirectoryNode" />
+              <item name="gestionar_diagnostico" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Proyecto" type="b2602c69:ProjectViewProjectNode" />
@@ -495,7 +512,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="gestionar_trabajador" type="462c0819:PsiDirectoryNode" />
+              <item name="gestionar_servicio" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Proyecto" type="b2602c69:ProjectViewProjectNode" />
@@ -503,7 +520,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="gestionar_servicios_tercerizados" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Proyecto" type="b2602c69:ProjectViewProjectNode" />
@@ -518,28 +535,30 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="web.php&#9;FILE&#9;file://C:/xampp/htdocs/Proyecto/routes/web.php&#10;auth.php&#9;FILE&#9;file://C:/xampp/htdocs/Proyecto/config/auth.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Proyecto\resources\views\admin\gestionar_administrativo" />
-      <recent name="C:\xampp\htdocs\Proyecto\resources\views\admin\gestionar_trabajador" />
-      <recent name="C:\xampp\htdocs\Proyecto\resources\views\admin\gestionar_vehiculo" />
-      <recent name="C:\xampp\htdocs\Proyecto\resources\views\admin\gestionar_recepcion" />
-      <recent name="C:\xampp\htdocs\Proyecto\resources\views\admin\gestionar_cliente" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Proyecto\resources\views\admin" />
       <recent name="C:\xampp\htdocs\Proyecto\public\js" />
       <recent name="C:\xampp\htdocs\Proyecto\resources\views\login-form-one-master\img" />
       <recent name="C:\xampp\htdocs\Proyecto\resources\views" />
       <recent name="C:\xampp\htdocs\Proyecto\public\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Proyecto\resources\views\admin\gestionar_servicios_tercerizados" />
+      <recent name="C:\xampp\htdocs\Proyecto\resources\views\admin\gestionar_administrativo" />
+      <recent name="C:\xampp\htdocs\Proyecto\resources\views\admin\gestionar_trabajador" />
+      <recent name="C:\xampp\htdocs\Proyecto\resources\views\admin\gestionar_vehiculo" />
+      <recent name="C:\xampp\htdocs\Proyecto\resources\views\admin\gestionar_recepcion" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -618,12 +637,16 @@
       <workItem from="1561406474571" duration="13830000" />
       <workItem from="1561465561698" duration="16064000" />
       <workItem from="1561561021199" duration="1219000" />
-      <workItem from="1561564053373" duration="10923000" />
+      <workItem from="1561564053373" duration="31233000" />
+      <workItem from="1561641893592" duration="8481000" />
+      <workItem from="1561695148208" duration="317000" />
+      <workItem from="1561855341281" duration="13435000" />
+      <workItem from="1561909353687" duration="9104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="318922000" />
+    <option name="totallyTimeSpent" value="370569000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -635,10 +658,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22390318" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19515885" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -649,9 +672,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3295082" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Command Line Tools Console" order="10" weight="0.30983606" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="10" weight="0.43114755" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.33114755" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -660,7 +683,7 @@
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30937973" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32526475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -671,9 +694,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3295082" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Command Line Tools Console" order="10" visible="true" weight="0.39344263" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="10" weight="0.30983606" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.33114755" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -689,267 +712,319 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RecepcionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-676" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RepuestoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-501" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ServicioController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-515" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ServicioTercerizadoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-574" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StockHerramientaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-415" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VehiculoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-271" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/AdministrativoStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/AlmacenStoreRequest.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/DetalleTrabajoStoreRequest.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/template/app.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/DiagnosticoStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/IngresoInsumoStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/HerramientaStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/IngresoRepuestoStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/InsumoStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/NotaReparacionStoreRequest.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/template/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="2635">
+          <caret line="155" column="13" selection-start-line="155" selection-start-column="13" selection-end-line="155" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/OrdenTrabajoStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/PersonalStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/RecepcionStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/RepuestoStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ServicioStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/VehiculoStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/TrabajadorStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/StockRepuestoStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/StockInsumoStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/StockHerramientaStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ServicioTercerizadoStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Stock_Insumo.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/registrar_servicio_tercerizado.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="62" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="62" />
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrdenTrabajoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/DetalleServicioTercerizadoStoreRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_05_22_215544_create_servicio_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Servicio.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_05_27_024629_create_servicio_tercerizado_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_05_27_032845_create_detalle_servicio_tercerizado_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_05_27_031708_create__detalle_uso_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_05_27_001250_create_detalle_de_trabajo_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/editar_detalle_trabajo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="108" selection-start-line="25" selection-start-column="108" selection-end-line="25" selection-end-column="108" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Trabajador.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="448" column="36" lean-forward="true" selection-start-line="448" selection-start-column="36" selection-end-line="448" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="53" column="183" selection-start-line="53" selection-start-column="183" selection-end-line="53" selection-end-column="183" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-305" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Personal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Administrativo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClienteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="68" column="121" lean-forward="true" selection-start-line="68" selection-start-column="92" selection-end-line="68" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NotaReparacionController.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StockRepuestoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-347" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TrabajadorController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="51" column="3" selection-start-line="51" selection-start-column="3" selection-end-line="55" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/detalle_administrativo.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/eliminar_administrativo.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StockInsumoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_stock_insumo/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_stock_insumo/registrar_stock_insumo.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/editar_administrativo.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1610">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_administrativo/registrar_administrativo.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-555">
-          <caret line="14" column="77" lean-forward="true" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/editar_trabajador.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+        <state relative-caret-position="1">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/registrar_trabajador.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="68" column="69" lean-forward="true" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
+        <state relative-caret-position="-714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_trabajador/detalle_trabajador.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/DetalleTrabajo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/registrar_detalle_trabajo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DetalleTrabajoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="35" column="55" lean-forward="true" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_detalle_trabajo/detalle_detalle_trabajo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="22" column="90" lean-forward="true" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/DetalleServicioTercerizado.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicio/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_diagnostico/index.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/template/app.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DiagnosticoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="36" column="50" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="50" />
+        <state relative-caret-position="204">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdministrativoController.php">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="910">
-          <caret line="63" column="65" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="65" />
+        <state relative-caret-position="204">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-101">
+          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cliente.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Personal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="31" column="60" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Recepcion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="76" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Vehiculo.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="307" column="51" lean-forward="true" selection-start-line="307" selection-start-column="51" selection-end-line="307" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReporteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/DetalleServicio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_05_27_001257_create_detalle_servicio_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ServicioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+          <folding>
+            <element signature="e#40#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ServicioTercerizadoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="75" lean-forward="true" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
+          <folding>
+            <element signature="e#40#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DetalleServicioTercerizadoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DetalleServicioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="30" column="65" lean-forward="true" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_vehiculo/registrar_vehiculo.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_cliente/registrar_cliente.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_almacen/registrar_almacen.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_diagnostico/registrar_diagnostico.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="36" column="55" lean-forward="true" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicio/registrar_detalle_servicio.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicio/detalle_servicio.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/registrar_detalle_servicio_tercerizado.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="90" lean-forward="true" selection-start-line="37" selection-start-column="90" selection-end-line="37" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/gestionar_servicios_tercerizados/detalle_servicio_tercerizado.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HerramientaController.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

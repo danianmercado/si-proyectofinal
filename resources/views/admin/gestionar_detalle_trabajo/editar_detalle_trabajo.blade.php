@@ -19,6 +19,16 @@
 
                         </div>
 
+                        <div class="col s12 input-field">
+                            <select name="id_servicio">
+                                <option value="{{$detalle->id_servicio}}" disabled selected>{{$detalle->servicio->Tipo_de_Servicio}}</option>
+                                @foreach($servicios as $servicio)
+                                    <option value="{{$servicio->id}}">{{$servicio->Tipo_de_Servicio}}</option>
+                                @endforeach
+                            </select>
+
+                        </div>
+
                         <div class="row">
                             <div class="col s12 input-field">
                                 <input  id="precio" name="precio" type="text" class="validate" value="{{$detalle->precio}}">

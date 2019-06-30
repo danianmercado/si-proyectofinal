@@ -29,8 +29,18 @@
                                 <input id="Nombre" name="Nombre" type="text" class="validate" value="{{$insumo->Nombre}}">
                                 <label for="Nombre">Nombre :</label>
                             </div>
+                            <div class="col s12  input-field">
+                                <input id="marca" name="marca" type="text" class="validate" value="{{$insumo->marca}}">
+                                <label for="marca">Marca:</label>
+                            </div>
 
-                        <div class="row">
+                            <div class="col s12  input-field">
+                                <input id="procedencia" name="procedencia" type="text" class="validate" value="{{$insumo->procedencia}}" >
+                                <label for="procedencia">Procedencia:</label>
+                            </div>
+
+
+                            <div class="row">
                             <div class="col s12 right-align">
                                 <a href="{{route('admin.insumo.index')}}" class="btn negative-primary-color" type="submit">cancelar</a>
                                 <button class="btn positive-primary-color" type="submit">Actualizar</button>
@@ -38,6 +48,7 @@
                         </div>
 
                     </div>
+                </div>
                 </div>
             </form>
 

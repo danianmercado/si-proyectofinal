@@ -38,12 +38,6 @@ class TrabajadorController extends Controller
         $trabajador->id_personal = $persona->id;
         $trabajador->save();
 
-        $user = new User();
-        $user->email = $request['email'];
-        $user->password = bcrypt($request['password']);
-        $user->id_personal = $persona->id;
-        $user->save();
-
 
 
         return redirect()->route('admin.trabajador.index');

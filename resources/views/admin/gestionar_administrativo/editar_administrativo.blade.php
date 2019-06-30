@@ -66,19 +66,6 @@
                                 <label for="password_confirmation">Repetir Contraseña :</label>
                             </div>
 
-                            <div class="input-field col s12">
-                                <select name="id_permiso[]"  multiple>
-                                    @foreach($roles as $role)
-                                        <optgroup label="{{$role->name}}">
-                                            @for($i = 0; $i < count($role->permissions); $i++)
-                                                <option value="{{$role->permissions[$i]->id}}">{{$role->permissions[$i]->name}}</option>
-                                            @endfor
-                                        </optgroup>
-                                    @endforeach
-                                </select>
-                                <label>Roles</label>
-                            </div>
-
                         </div>
 
                         <div class="row">

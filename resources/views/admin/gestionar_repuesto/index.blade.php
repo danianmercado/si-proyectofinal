@@ -49,7 +49,7 @@
             fila[4] = '{{$repuesto->Nombre}}';
             fila[5] = '{{$repuesto->ingreso_repuesto->first()['Cantidad']}}';
                 fila[6] = '<div>' +
-                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
+                '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.repuesto.show', [$repuesto->id])}}" + ' " class="white-text" >Detalle</a></span>' +
                 '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.repuesto.editar', [$repuesto->id])}}" + ' " class="white-text" >Editar</a></span>' +
                 '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.repuesto.eliminar', [$repuesto->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
                 '<span class="new badge positive-secondary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route($S , [$repuesto->ingreso_repuesto->first()['id']])}}" + ' " class="white-text" >Ingresar Unidades</a></span>' +

@@ -31,7 +31,7 @@
 </div>
 <div class="row">
     <div class="col s12">
-        <a href="#" class="waves-effect waves-light btn positive-primary-color"><i class="material-icons right">add_box</i>Registrar Detalle Servicio</a>
+        <a href="{{route('admin.detalle_servicio.registrar')}}" class="waves-effect waves-light btn positive-primary-color"><i class="material-icons right">add_box</i>Registrar Detalle Servicio</a>
     </div>
 </div>
 
@@ -42,8 +42,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Tipo de servicio</th>
-                    <th>Estado</th>
+                    <th>Descripcion</th>
                     <th>Acciones</th>
                 </tr>
 
@@ -59,16 +58,19 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var datos = [];
+            @foreach($detalle_servicios as $detalle_servicio)
         var fila = [];
-
-        fila[0] = '<div>' +
-            '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Detalle</a></span>' +
-            '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Editar</a></span>' +
-            '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Eliminar</a></span>' +
+        fila[0] = '{{$detalle_servicio->id}}';
+        fila[1] = '{{$detalle_servicio->descripcion}}';
+        fila[2] = '<div>' +
+            '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio.editar', [$servicio->id])}}" + ' " class="white-text" >Editar</a></span>' +
+            '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio.eliminar', [$servicio->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
             '</div>';
         datos.push(fila);
+        @endforeach
         addDatosGeneral(datos);
-    };
+    })
+
 </script>
 
 

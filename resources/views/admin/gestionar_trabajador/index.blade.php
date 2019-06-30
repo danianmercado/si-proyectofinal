@@ -50,9 +50,7 @@
                     @can('trabajador.edit')
                     '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.trabajador.editar', [$trabajador->id])}}" + ' " class="white-text" >Editar</a></span>' +
                     @endcan
-                    @can('trabajador.delete')
-                    '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.trabajador.eliminar', [$trabajador->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
-                    @endcan
+
                     '</div>';
                 datos.push(fila);
             @endforeach
