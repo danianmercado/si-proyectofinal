@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Bitacora;
 use Illuminate\Http\Request;
 use App\Http\Requests\StockInsumoStoreRequest;
 use App\Stock_insumo;
@@ -25,11 +26,13 @@ class StockInsumoController extends Controller
     }
 
     public function show($id_insumo){
+        Bitacora::tupla_bitacora('Mostrar el stock insumo :'.$id_insumo);//bitacora
         $stock_insumo = Stock_insumo::findOrFail($id_insumo);
         return View('admin.gestionar_stock_insumo.detalle_stock_insumo', ['stock_insumo' => $stock_insumo]);
 
     }
     public function registrar(){
+        Bitacora::tupla_bitacora('Entro al formulario de registro de stock insumo');//bitaacora
         $insumos = Insumo::all();
         $almacenes = Almacen::all();
         return view('admin.gestionar_stock_insumo.registrar_stock_insumo', ['insumos' => $insumos,'almacenes' => $almacenes]);
@@ -38,10 +41,12 @@ class StockInsumoController extends Controller
     public function guardar(StockInsumoStoreRequest $request){
         $stock_insumo=new Stock_insumo($request->all());
         $stock_insumo->save();
+        Bitacora::tupla_bitacora('Registro al stock de insumo:'.$stock_insumo->id);//bitacora
         return redirect()->route('admin.stock_insumo.index');
     }
 
     public function editar($id_stock_insumo){
+        Bitacora::tupla_bitacora('Entro al formulario para editar stock de insumo :'.$id_stock_insumo);//bitacora
         $stock_insumo = Stock_insumo::findOrFail($id_stock_insumo);
         return View('admin.gestionar_stock_insumo.editar_stock_insumo', ['stock_insumo' => $stock_insumo]);
     }
@@ -50,6 +55,7 @@ class StockInsumoController extends Controller
         $stock_insumo = Stock_insumo::findOrFail($id_stock_insumo);
         $stock_insumo->Cantidad=$request['Cantidad'];
         $stock_insumo->save();
+        Bitacora::tupla_bitacora('Se Modifico el stock de insumo:'.$stock_insumo->id);//bitacora
         return redirect()->route('admin.stock_insumo.index');
     }
 

@@ -14,19 +14,19 @@ class OrdenTrabajoController extends Controller
 {
 
     public function index()
-    {
+    {    Bitacora::tupla_bitacora('Mostro la lista de orden de trabajo');//bitacora
         $ordenes = OrdenTrabajo::all();
         return view('admin.gestionar_orden_trabajo.index', ['ordenes'=>$ordenes]);
     }
 
-    public function show($id_orden)
-    {
+    public function show($id_orden){
+        Bitacora::tupla_bitacora('Mostrar la orden de trabajo :'.$id_orden);//bitacora
         $orden = OrdenTrabajo::findOrFail($id_orden);
         return view('admin.gestionar_orden_trabajo.detalle_orden_trabajo', ['orden'=>$orden]);
     }
 
     public function registrar()
-    {
+    {  Bitacora::tupla_bitacora('Entro al formulario de registro de orden de trabajo');//bitaacora
         $recepciones = Recepcion::all();
         $trabajadores = Trabajador::all();
         return view('admin.gestionar_orden_trabajo.registrar_orden_trabajo', ['recepciones'=>$recepciones, 'trabajadores'=>$trabajadores]);
@@ -37,6 +37,7 @@ class OrdenTrabajoController extends Controller
     {
         $orden = new OrdenTrabajo($request->all());
         $orden->save();
+        Bitacora::tupla_bitacora('Registro el orden de trabajo:'.$orden->id);//bitacora
         return redirect()->route('admin.orden_trabajo.index');
     }
 

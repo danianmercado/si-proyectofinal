@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Bitacora;
 use App\Personal;
 use App\Trabajador;
 use Illuminate\Http\Request;
@@ -18,11 +19,12 @@ class TrabajadorController extends Controller
     }
 
     public function show($id_trabajador)
-    {
+    {   Bitacora::tupla_bitacora('Mostrar el trabajador :'.$id_trabajador);//bitacora
         $trabajador = Trabajador::findOrFail($id_trabajador);
         return view('admin.gestionar_trabajador.detalle_trabajador', ['trabajador'=>$trabajador]);
     }
     public function registrar(){
+        Bitacora::tupla_bitacora('Entro al formulario de registro de trabajador');//bitaacora
         $roles = Role::all();
         return view('admin.gestionar_trabajador.registrar_trabajador',['roles'=>$roles]);
     }
@@ -39,12 +41,12 @@ class TrabajadorController extends Controller
         $trabajador->save();
 
 
-
+        Bitacora::tupla_bitacora('Registro el trabajador:'.$trabajador->id);//bitacora
         return redirect()->route('admin.trabajador.index');
     }
 
     public function editar($id)
-    {
+    {     Bitacora::tupla_bitacora('Entro al formulario para editar trabajador :'.$id);//bitacora
         $trabajador = Trabajador::findOrFail($id);
         return view('admin.gestionar_trabajador.editar_trabajador', ['trabajador'=>$trabajador]);
     }
@@ -65,7 +67,7 @@ class TrabajadorController extends Controller
         $personal->save();
 
         $trabajador->save();
-
+        Bitacora::tupla_bitacora('Se Modifico el trabajador:'.$trabajador->id);//bitacora
         return redirect()->route('admin.trabajador.index');
     }
 

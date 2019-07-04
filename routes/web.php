@@ -22,6 +22,7 @@ Route::get('prueba', function(){
 });
 
 
+
 Route::group(['prefix'=>'admin'], function (){
         Route::group(['prefix'=>'trabajador'], function (){
             Route::get('index', function () {
@@ -141,6 +142,15 @@ Route::group(['prefix'=>'admin'], function (){
         Route::delete('delete/{id_detalle_trabajo}','DetalleTrabajoController@delete')->name('admin.detalle_trabajo.delete');
     });
 
+
+///////////    INGRESO DE Detalle de uso ///////////////////////////////////////////////////////////////////
+    Route::group(['prefix'=>'detalleuso'], function (){
+        Route::get('registrar','DetalleUsoController@registrar')->name('admin.detalleuso.registrar');
+        Route::post('guardar','DetalleUsoController@guardar')->name('admin.detalleuso.guardar');
+        Route::get('editar/{id_detalleuso}','DetalleUsoController@editar')->name('admin.detalleuso.editar');
+        Route::put('modificar/{id_detalleuso}','DetalleUsoController@modificar')->name('admin.detalleuso.modificar');
+    });
+
 ///////////    SERVICIO ///////////////////////////////////////////////////////////////////
     Route::group(['prefix'=>'servicio'], function (){
         Route::get('index','ServicioController@index' )->name('admin.servicio.index');
@@ -173,19 +183,20 @@ Route::group(['prefix'=>'admin'], function (){
             Route::put('modificar/{id_servicio_tercerizado}','ServicioTercerizadoController@modificar')->name('admin.servicio_tercerizado.modificar');
             Route::get('eliminar/{id_servicio_tercerizado}','ServicioTercerizadoController@eliminar')->name('admin.servicio_tercerizado.eliminar');
             Route::delete('delete/{id_servicio_tercerizado}','ServicioTercerizadoController@delete')->name('admin.servicio_tercerizado.delete');
+
+            Route::group(['prefix'=>'detalle_servicio_tercerizado'], function (){
+                Route::get('show/{id_servicio_tercerizado}/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@show')->name('admin.detalle_servicio_tercerizado.show');
+                Route::get('registrar/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@registrar' )->name('admin.detalle_servicio_tercerizado.registrar');
+                Route::post('guardar/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@guardar')->name('admin.detalle_servicio_tercerizado.guardar');
+
+                Route::get('editar/{id_servicio_tercerizado}/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@editar')->name('admin.detalle_servicio_tercerizado.editar');
+                Route::put('modificar/{id_servicio_tercerizado}/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@modificar')->name('admin.detalle_servicio_tercerizado.modificar');
+                Route::get('eliminar/{id_servicio_tercerizado}/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@eliminar')->name('admin.detalle_servicio_tercerizado.eliminar');
+                Route::delete('delete/{id_servicio_tercerizado}/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@delete')->name('admin.detalle_servicio_tercerizado.delete');
+            });
+
         });
 
-    //////////   DETALLE SERVICIO TERCERIZADO //////////////////////////////////////////////////////////
-    Route::group(['prefix'=>'detalle_servicio_tercerizado'], function (){
-        Route::get('index','DetalleServicioTercerizadoController@index')->name('admin.detalle_servicio_tercerizado.index');
-        Route::get('show/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@show')->name('admin.detalle_servicio_tercerizado.show');
-        Route::get('registrar','DetalleServicioTercerizadoController@registrar' )->name('admin.detalle_servicio_tercerizado.registrar'); //'admin.gestionar_servicios_tercerizados.registrar_servicios_tercerizados'
-        Route::post('guardar','DetalleServicioTercerizadoController@guardar')->name('admin.detalle_servicio_tercerizado.guardar');
-        Route::get('editar/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@editar')->name('admin.detalle_servicio_tercerizado.editar');
-        Route::put('modificar/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@modificar')->name('admin.detalle_servicio_tercerizado.modificar');
-        Route::get('eliminar/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@eliminar')->name('admin.detalle_servicio_tercerizado.eliminar');
-        Route::delete('delete/{id_detalle_servicio_tercerizado}','DetalleServicioTercerizadoController@delete')->name('admin.detalle_servicio_tercerizado.delete');
-    });
 
 
 ///////////    REPUESTO ///////////////////////////////////////////////////////////////////
@@ -301,4 +312,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 //Repotes
-Route::get('reportes/vehiculos','ReporteController@showVehiculosReporte');
+Route::get('Reporte_Vehiculo','ReporteController@showVehiculosReporte')->name('reporte_vehiculo');

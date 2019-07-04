@@ -31,6 +31,8 @@
                             <div class="col s12 right-align">
                                 <a href="{{route('admin.servicio_tercerizado.index')}}" class="btn negative-primary-color" type="submit">cancelar</a>
                                 <button class="btn positive-primary-color" type="submit">registrar</button>
+
+
                             </div>
                         </div>
 

@@ -42,7 +42,8 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Descripcion</th>
+                    <th>Descripcion  </th>
+                    <th>Fecha de registro  </th>
                     <th>Acciones</th>
                 </tr>
 
@@ -53,18 +54,20 @@
             </table>
         </div>
     </div>
+
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var datos = [];
-            @foreach($detalle_servicios as $detalle_servicio)
+        @foreach($detalle_servicios as $detalle_servicio)
         var fila = [];
         fila[0] = '{{$detalle_servicio->id}}';
         fila[1] = '{{$detalle_servicio->descripcion}}';
-        fila[2] = '<div>' +
-            '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio.editar', [$servicio->id])}}" + ' " class="white-text" >Editar</a></span>' +
-            '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.servicio.eliminar', [$servicio->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
+        fila[2] = '{{$detalle_servicio->created_at}}';
+        fila[3] = '<div>' +
+            '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.detalle_servicio.editar', [$servicio->id,$detalle_servicio->id])}}" + ' " class="white-text" >Editar</a></span>' +
+            '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.detalle_servicio.eliminar', [$servicio->id,$detalle_servicio->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
             '</div>';
         datos.push(fila);
         @endforeach
@@ -72,7 +75,6 @@
     })
 
 </script>
-
 
 
 @endsection

@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Bitacora;
+use App\Http\Requests\PersonalStoreRequest;
+use App\Personal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PersonalController extends Controller
 {
@@ -12,6 +16,7 @@ class PersonalController extends Controller
     }
 
     public function show($id_personal){
+        Bitacora::tupla_bitacora('Mostrar el personal :'.$id_personal);//bitacora
         $personal = Personal::findOrFail($id_personal);
         return View('admin.gestionar_personal.detalle_personal', ['personal' => $personal]);
 

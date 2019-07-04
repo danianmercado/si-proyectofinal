@@ -10,12 +10,8 @@ class DetalleServicioTercerizado extends Model
     protected $fillable = ['id_st', 'descripcion', 'fecha','id_detTrab'];
 
 
-    public function trabajador()
-    {
+    public function detalle_trabajo(){
         return $this->belongsTo('App\DetalleTrabajo', 'id_detTrab');
     }
-    public function recepcion()
-    {
-        return $this->belongsTo('App\Servicio_Tercerizado', 'id_st');
-    }
+
 }

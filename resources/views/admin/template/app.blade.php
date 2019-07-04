@@ -99,9 +99,9 @@
                             @can('detalle_trabajo.index')
                             <li><a href="{{route('admin.detalle_trabajo.index')}}" class="waves-effect">Gestionar detalles de trabajo<i class="material-icons">list</i></a></li>
                             @endcan
-                            @can('nota_reparacion.index')
+
                             <li><a href="{{route('admin.nota_reparacion.index')}}" class="waves-effect">Gestionar nota de reparacion<i class="material-icons">list</i></a></li>
-                            @endcan
+
                         </ul>
                     </div>
                 </li>
@@ -134,6 +134,15 @@
 
                                 </li>
                             </ul>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bold waves-effect"><a class="collapsible-header">Reportes<i class="material-icons chevron">chevron_left</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+
+                                <li><a target="_blank" href="{{route('reporte_vehiculo')}}" class="waves-effect">Reporte Vehiculos<i class="material-icons">list</i></a></li>
+
                         </ul>
                     </div>
                 </li>

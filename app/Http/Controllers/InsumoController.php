@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Bitacora;
 use Illuminate\Http\Request;
 use App\Http\Requests\InsumoStoreRequest;
 use App\Insumo;
@@ -10,16 +11,19 @@ use Illuminate\Support\Facades\DB;
 class InsumoController extends Controller
 {
     public function index(){
+        Bitacora::tupla_bitacora('Mostro la lista de insumos');//bitacora
         $insumos=Insumo::all();
         return view('admin.gestionar_insumo.index',['insumos'=>$insumos]);
     }
 
     public function show($id_insumo){
+        Bitacora::tupla_bitacora('Mostrar el insumo :'.$id_insumo);//bitacora
         $insumo = Insumo::findOrFail($id_insumo);
         return View('admin.gestionar_insumo.detalle_insumo', ['insumo' => $insumo]);
 
     }
     public function registrar(){
+        Bitacora::tupla_bitacora('Entro al formulario de registro de insumo');//bitaacora
         return view('admin.gestionar_insumo.registrar_insumo');
     }
 
@@ -27,10 +31,12 @@ class InsumoController extends Controller
         $insumo=new Insumo($request->all());
         $insumo->Tipo_producto='I';
         $insumo->save();
+        Bitacora::tupla_bitacora('Registro el insumo:'.$insumo->id);//bitacora
         return redirect()->route('admin.insumo.index');
     }
 
     public function editar($id_insumo){
+        Bitacora::tupla_bitacora('Entro al formulario para editar insumo :'.$id_insumo);//bitacora
         $insumo = Insumo::findOrFail($id_insumo);
         return View('admin.gestionar_insumo.editar_insumo', ['insumo' => $insumo]);
     }
@@ -42,6 +48,7 @@ class InsumoController extends Controller
         $insumo->descripcion = $request['descripcion'];
         $insumo->costo = $request['Costo'];
         $insumo->save();
+        Bitacora::tupla_bitacora('Se Modifico el insumo:'.$insumo->id);//bitacora
         return redirect()->route('admin.insumo.index');
     }
 

@@ -16,7 +16,6 @@
                         <th>Precio</th>
                         <th>Descripcion</th>
                         <th>Orden de Trabajo</th>
-
                         <th>Acciones</th>
                     </tr>
 
@@ -40,6 +39,7 @@
                 '<span class="new badge positive-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.detalle_trabajo.show', [$dl->id])}}" + ' " class="white-text" >Detalle</a></span>' +
                 '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.detalle_trabajo.editar', [$dl->id])}}"+ ' " class="white-text" >Editar</a></span>' +
                 '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.detalle_trabajo.eliminar', [$dl->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
+                '<span class="new badge positive-secondary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.detalleuso.registrar', [$dl->detalleuso[0]['id']],[$dl->id])}}" + ' " class="white-text" >registrar producto</a></span>'
                 '</div>';
             datos.push(fila);
             @endforeach

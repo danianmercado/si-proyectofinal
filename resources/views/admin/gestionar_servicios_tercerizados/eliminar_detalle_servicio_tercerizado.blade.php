@@ -3,12 +3,12 @@
     <div class="row">
         <div class="col s12 m10 offset-m1 l6 offset-l3">
 
-            <form action="{{route('admin.servicio_tercerizado.delete',[$servicio_tercerizado->id])}}" method="post">
+            <form action="{{route('admin.detalle_servicio_tercerizado.delete',[$servicio_tercerizado->id,$detalle->id])}}" method="post">
                 @csrf
                 @method('delete')
                 <div class="card z-depth-4">
                     <div class="card-content">
-                        <span class="card-title center-align">Eliminar servicio tercerizado </span>
+                        <span class="card-title center-align">Eliminar Detalle de Servicio Tercerizado </span>
 
                         <div class="row">
                             <div class="col s12 input-field">
@@ -18,11 +18,10 @@
                             </div>
 
 
-
                             <div class="row">
                                 <div class="col s12 right-align">
                                     <button class="btn positive-primary-color" type="submit">aceptar</button>
-                                    <a href="{{route('admin.servicio_tercerizado.index')}}" class="btn negative-primary-color" type="submit">cancelar</a>
+                                    <a href="{{route('admin.servicio_tercerizado.show',[$servicio_tercerizado->id])}}" class="btn negative-primary-color" type="submit">cancelar</a>
                                 </div>
                             </div>
                         </div>

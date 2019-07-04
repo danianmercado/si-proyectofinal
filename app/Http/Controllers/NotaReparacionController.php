@@ -12,13 +12,13 @@ use Illuminate\Support\Facades\DB;
 class NotaReparacionController extends Controller
 {
     public function index()
-    {
+    {   Bitacora::tupla_bitacora('Mostro la lista de Nota de reparacion');//bitacora
         $notas = Nota_reparacion::all();
         return view('admin.gestionar_nota_reparacion.index', ['notas'=>$notas]);
     }
 
-    public function show($id_nota)
-    {
+    public function show($id_nota){
+        Bitacora::tupla_bitacora('Mostrar la nota de reparacion :'.$id_nota);//bitacora
         $nota = Nota_reparacion::findOrFail($id_nota);
         return view('admin.gestionar_nota_reparacion.detalle_nota_reparacion', ['nota'=>$nota]);
     }
@@ -31,16 +31,16 @@ class NotaReparacionController extends Controller
 
 
     public function guardar(NotaReparacionStoreRequest $request){
-      /*  $id_orden = $request['id'];
+        $id_orden = $request['id_ot'];
         $suma = DB::table('detalle_trabajo')
             ->where('id_ot', '=', $id_orden)
             ->select(DB::raw('SUM(detalle_trabajo.precio)as total'))
             ->groupBy('id_ot')
-            ->first();*/
+            ->first();
 
 
         $nota= new Nota_reparacion($request->all());
-     ///   $nota->total=$suma['total'];
+        $nota->total=$suma->total;
         $nota->save();
         Bitacora::tupla_bitacora('Registro nota de reparacion:'.$nota->id);//bitacora
         return redirect()->route('admin.nota_reparacion.index');

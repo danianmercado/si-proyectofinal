@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Bitacora;
 use App\Http\Requests\AdministrativoStoreRequest;
 use App\Personal;
 use App\Administrativo;
@@ -14,17 +15,19 @@ use Illuminate\Support\Facades\DB;
 class AdministrativoController extends Controller
 {
     public function index(){
+        Bitacora::tupla_bitacora('Mostro la lista de administrtivos');//bitacora
         $administrativos = Administrativo::all();
 
         return view('admin.gestionar_administrativo.index', ['administrativos'=>$administrativos]);
     }
 
-    public function show($id_administrativo)
-    {
+    public function show($id_administrativo){
+        Bitacora::tupla_bitacora('Mostrar el Administratico :'.$id_administrativo);//bitacora
         $administrativo = Administrativo::findOrFail($id_administrativo);
         return view('admin.gestionar_administrativo.detalle_administrativo', ['administrativo'=>$administrativo]);
     }
     public function registrar(){
+        Bitacora::tupla_bitacora('Entro al formulario de registro de administrador');//bitaacora
         $roles = Role::all();
         return view('admin.gestionar_administrativo.registrar_administrativo', ['roles'=>$roles]);
     }
@@ -59,11 +62,19 @@ class AdministrativoController extends Controller
     }
 
     public function editar($id)
-    {
+    {   Bitacora::tupla_bitacora('Entro al formulario para editar administrativo :'.$id);//bitacora
         $admin = Administrativo::findOrFail($id);
-        return view('admin.gestionar_trabajador.editar_trabajador', ['admin'=>$admin]);
+        return view('admin.gestionar_administrativo.editar_administrativo', ['admin'=>$admin]);
     }
+    public function modificar(Request $request,$id){
 
+        $admin = Administrativo::findOrFail($id);
+        $admin->id_personal=$request['id_personal'];
+        $admin->area = $request['area'];
+        $admin->save();
+        Bitacora::tupla_bitacora('Se Modifico el cliente:'.$id->id);//bitacora
+        return redirect()->route('admin.administrativo.index');
+    }
 
     public function eliminar($id)
     {

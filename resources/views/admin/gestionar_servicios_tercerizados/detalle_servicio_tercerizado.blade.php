@@ -46,7 +46,7 @@
     </div>
     <div class="row">
         <div class="col s12">
-            <a href="{{route('admin.detalle_servicio_tercerizado.registrar')}}" class="waves-effect waves-light btn positive-primary-color"><i class="material-icons right">add_box</i>Registrar Detalle Servicio Tercerizado</a>
+            <a href="{{route('admin.detalle_servicio_tercerizado.registrar',[$servicio_tercerizado->id])}}" class="waves-effect waves-light btn positive-primary-color"><i class="material-icons right">add_box</i>Registrar Detalle Servicio Tercerizado</a>
         </div>
     </div>
 
@@ -59,6 +59,7 @@
                         <th>ID</th>
                         <th>Fecha</th>
                         <th>Descripcion</th>
+                        <th>Detalle de trabajo</th>
                         <th>Acciones</th>
                     </tr>
 
@@ -79,9 +80,10 @@
             fila[0] = '{{$detalle_servicio_tercerizad->id}}';
             fila[1] = '{{$detalle_servicio_tercerizad->fecha}}';
             fila[2] = '{{$detalle_servicio_tercerizad->descripcion}}';
-            fila[3] = '<div>' +
-                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Editar</a></span>' +
-                '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "#" + ' " class="white-text" >Eliminar</a></span>' +
+            fila[3] = '{{$detalle_servicio_tercerizad->descripcion}}';
+            fila[4] = '<div>' +
+                '<span class="new badge neutral-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.detalle_servicio_tercerizado.editar', [$servicio_tercerizado->id, $detalle_servicio_tercerizad->id])}}" + ' " class="white-text" >Editar</a></span>' +
+                '<span class="new badge negative-primary-color" data-badge-caption="" style="margin-right:5px"><a href=" ' + "{{route('admin.detalle_servicio_tercerizado.eliminar', [$servicio_tercerizado->id, $detalle_servicio_tercerizad->id])}}" + ' " class="white-text" >Eliminar</a></span>' +
                 '</div>';
             datos.push(fila);
             @endforeach

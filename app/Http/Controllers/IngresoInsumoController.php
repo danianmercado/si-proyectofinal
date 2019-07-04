@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Bitacora;
 use Illuminate\Http\Request;
 use App\Http\Requests\IngresoInsumoStoreRequest;
 use App\Ingreso_Insumo;
@@ -13,6 +14,7 @@ class IngresoInsumoController extends Controller
 
  
     public function registrar(){
+        Bitacora::tupla_bitacora('Entro al formulario de registro de ingreso insumo');//bitaacora
         $insumos = Insumo::all();
         $almacenes = Almacen::all();
         return view('admin.gestionar_ingreso.registrar_ingreso_insumo', ['insumos' => $insumos,'almacenes' => $almacenes]);
@@ -21,10 +23,12 @@ class IngresoInsumoController extends Controller
     public function guardar(IngresoInsumoStoreRequest $request){
         $ingreso_insumo = new Ingreso_Insumo($request->all());
         $ingreso_insumo->save();
+        Bitacora::tupla_bitacora('Registro el ingreso insumo:'.$ingreso_insumo->id);//bitacora
         return redirect()->route('admin.insumo.index');
     }
     
     public function editar($id_ingreso_insumo){
+        Bitacora::tupla_bitacora('Entro al formulario para editar ingreso insumo :'.$id_ingreso_insumo);//bitacora
         $ingreso_insumo = Ingreso_Insumo::findOrFail($id_ingreso_insumo);
         $insumos = Insumo::all();
         $almacenes = Almacen::all();
@@ -41,6 +45,7 @@ class IngresoInsumoController extends Controller
         $suma=$cant+ $ingreso_insumo->Cantidad;
         $ingreso_insumo->Cantidad = $suma;
         $ingreso_insumo->save();
+        Bitacora::tupla_bitacora('Se Modifico el ingreso insumo:'.$ingreso_insumo->id);//bitacora
         return redirect()->route('admin.insumo.index');
     }
 }

@@ -3,12 +3,12 @@
     <div class="row">
         <div class="col s12 m10 offset-m1 l8 offset-l2">
 
-            <form action="{{route('admin.administrativo.guardar')}}" method="POST">
+            <form action="{{route('admin.administrativo.modificar',[$admin->id])}}" method="POST">
                 @csrf
-
+                @method("PUT")
                 <div class="card z-depth-4">
                     <div class="card-content">
-                        <span class="card-title center-align">Registrar Administrativo</span>
+                        <span class="card-title center-align">Editar Administrativo</span>
                         <div class="row">
                             <div class="col s12 m6 input-field">
                                 <input  id="ci" name="ci" type="number" class="validate">
@@ -50,21 +50,6 @@
                                 <label for="area">Area :</label>
                             </div>
 
-
-                            <div class="col s12 m6 input-field">
-                                <input id="email" name="email" type="email" class="validate">
-                                <label for="email">Correo :</label>
-                            </div>
-
-                            <div class="col s12 m6 input-field">
-                                <input id="password" name="password" type="password" class="validate">
-                                <label for="password">Contraseña :</label>
-                            </div>
-
-                            <div class="col s12 m6 input-field">
-                                <input id="password_confirmation" name="password_confirmation" type="password" class="validate">
-                                <label for="password_confirmation">Repetir Contraseña :</label>
-                            </div>
 
                         </div>
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Bitacora;
 use Illuminate\Http\Request;
 use App\Http\Requests\StockHerramientaStoreRequest;
 use App\Stock_herramienta;
@@ -18,11 +19,13 @@ class StockHerramientaController extends Controller
     }
 
     public function show($id_herramienta){
+        Bitacora::tupla_bitacora('Mostrar la herramienta :'.$id_herramienta);//bitacora
         $stock_herramienta = Stock_herramienta::findOrFail($id_herramienta);
         return View('admin.gestionar_stock_herramienta.detalle_stock_herramienta', ['stock_herramienta' => $stock_herramienta]);
 
     }
     public function registrar(){
+        Bitacora::tupla_bitacora('Entro al formulario de registro de stock de herramienta');//bitaacora
         $herramientas = Herramienta::all();
         $almacenes = Almacen::all();
         return view('admin.gestionar_stock_herramienta.registrar_stock_herramienta', ['herramientas' => $herramientas,'almacenes' => $almacenes]);
@@ -31,10 +34,12 @@ class StockHerramientaController extends Controller
     public function guardar(StockHerramientaStoreRequest $request){
         $stock_herramienta=new Stock_herramienta($request->all());
         $stock_herramienta->save();
+        Bitacora::tupla_bitacora('Registro al stock herramienta:'.$stock_herramienta->id);//bitacora
         return redirect()->route('admin.stock_herramienta.index');
     }
 
     public function editar($id_stock_herramienta){
+        Bitacora::tupla_bitacora('Entro al formulario para editar stock de herramienta :'.$id_stock_herramienta);//bitacora
         $stock_herramienta = Stock_herramienta::findOrFail($id_stock_herramienta);
         return View('admin.gestionar_stock_herramienta.editar_stock_herramienta', ['stock_herramienta' => $stock_herramienta]);
     }
@@ -43,6 +48,7 @@ class StockHerramientaController extends Controller
         $stock_herramienta = Stock_herramienta::findOrFail($id_stock_herramienta);
         $stock_herramienta->Cantidad=$request['Cantidad'];;
         $stock_herramienta->save();
+        Bitacora::tupla_bitacora('Se Modifico el stock de herramienta:'.$stock_herramienta->id);//bitacora
         return redirect()->route('admin.stock_herramienta.index');
     }
 

@@ -3,8 +3,9 @@
     <div class="row">
         <div class="col s12 m10 offset-m1 l6 offset-l3">
 
-            <form action="{{route('admin.nota_reparacion.guardar')}}" method="POST">
+            <form action="{{route('admin.nota_reparacion.guardar',[$nota->id])}}" method="POST">
                 @csrf
+                @method("PUT")
                 <div class="card z-depth-4">
                     <div class="card-content">
                         <span class="card-title center-align">Registrar Nota de Reparacion</span>
@@ -20,12 +21,12 @@
                         </div>
 
                         <div class="col s12 input-field">
-                            <input  id="Fecha_entrega" name="Fecha_entrega" type="text" class="datepicker">
+                            <input  id="Fecha_entrega" name="Fecha_entrega" type="text" class="datepicker" value="{{$nota->Fecha_entrega}}">
                             <label for="Fecha_entrega">Fecha de Entrega:</label>
                             {!! $errors->first('Fecha_entrega','<span class="help-block red-text">Esta información es obligatoria.') !!}
                         </div>
                         <div class="col s12  input-field">
-                            <input  id="observaciones" name="observaciones" type="text" class="validate">
+                            <input  id="observaciones" name="observaciones" type="text" class="validate" value="{{$nota->observaciones}}">
                             <label for="observaciones">Observaciones :</label>
                         </div>
 
